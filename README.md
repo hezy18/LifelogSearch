@@ -1,1 +1,2 @@
 # LifelogSearch
+python app.py
