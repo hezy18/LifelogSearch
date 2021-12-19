@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>LIFE RECORD: Search page</title>
+    <!-- <link rel="stylesheet" href="{{ url_for('static',filename='js/SearchPage.js') }}"> -->
+    <style>
+        *{
+            margin: 0; padding: 0;
+            font-family: sans-serif;list-style: none;
+            text-decoration: none;
+        }
+        .box{
+            border-width: 10px;
+            border-color: black;
+        }
+        div {
+            display: block;
+        }
+        #title{
+            position: absolute;
+            height: 100px;width: 99%;
+            border-bottom:7px solid  black ;
+            background-color: rgb(183, 228, 247);
+        } 
+        #title h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+            line-height: 100px;
+        }
+        #navcontainer {
+            bottom: 0px; right: 20px; float: right;
+        }
+        #navcontainer {
+            height: 30px;  position: absolute; z-index: 300;
+        }
+        #navcontainer ul {
+            margin: 0; padding: 0;  z-index: 5; list-style-type: none;
+        }
+        #navcontainer ul li{ float:left}
+        #navcontainer a {
+            display: block;  padding: 0px 10px 17px;
+            text-decoration: none; font-weight: normal;
+            font-size:20px;
+        }   
+        #navcontainer a:link,a:visited{color:black;}
+        #navcontainer a:hover{color: white;}
+        .middle{
+            position: absolute;
+            top: 50%; left:50%;
+            transform: translate(-50%,-50%);
+        }
+        .menu{
+            width: 300px; border-radius: 8px; overflow: hidden;
+        }
+        .item{
+            border-top: 1px solid rgb(183, 228, 247);
+            overflow:hidden;
+        }
+        .subtitle{
+            display: block; padding: 16px 20px;
+            background: rgb(183, 228, 247);
+            color:white;
+            position: relative;
+        }
+        .subtitle:before{
+            content: ""; position:absolute;
+            width: 14px; height: 14px; background: rgb(183, 228, 247);
+            left: 20px; bottom:-7px;
+            transform: rotate(45deg);
+        }
+        .smenu{
+            background: black;
+            overflow: hidden;
+            transition: max-height 0.3s;
+            max-height: 0;
+        }
+        .smenu a{
+            display: block;
+            padding: 16px 26px; color: white;
+            font-size:14px; margin: 4px 0;
+            position: relative;
+        }
+        .item:target .smenu{
+            max-height: 10em;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<!-- <form action="/search/" method="POST"> -->
+    <!-- {{ form.csrf_token() }} -->
+    <div class="middle">
+        <div class="menu">
+           <li class="item" id="basic">
+                <a  href="#basic" class="subtitle">basic</a>
+                <div class="smenu">
+                    <a href="#">a</a>
+                    <a href="#">b</a>
+                </div>
+            </li>
+           <li class="item" id="detail">
+                <a href="#detail" class="subtitle">media</a>
+                <div class="smenu">
+                    <a href="#">a</a>
+                    <a href="#">b</a>
+                </div>
+            </li>
+           <li class="item" id="semantic">
+                <a href="#semantic" class="subtitle">semantic</a>
+                <div class="smenu">
+                    <a href="#">a</a>
+                    <a href="#">b</a>
+                </div>
+           </li> 
+        </div>
+    </div>
+<!-- </form> -->
+
+</body>
+</html>

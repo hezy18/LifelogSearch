@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet type=text/css href="{{ url_for('static',filename='css/Title.css') }}">
+    <link rel=stylesheet type=text/css href="{{ url_for('static',filename='css/buttons.css') }}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <span id='title'>
+        <!-- <h1>生活日志检索</h1> -->
+        <h1>LIFE RECORD</h1>
+        <div id="navcontainer">
+        <ul class="list-inline">
+            <li><a href="{{url_for('home.home_page')}}">Home</a></li>
+            <li><a href="{{url_for('search.search_page')}}">Search by Text</a></li>
+            <li><a href="{{url_for('image_search.img_search')}}">Search by Image</a></li>                
+            <li><a href="{{url_for('timeline.timeline_search')}}">Timeline</a></li>
+            <!-- <li><a href="{{url_for('home.home_page')}}">主页</a></li> -->
+            <!-- <li><a href="{{url_for('search.search_page')}}">文本查询</a></li> -->
+            <!-- <li><a href="{{url_for('image_search.img_search')}}">图片查询</a></li>                 -->
+            <!-- <li><a href="{{url_for('timeline.timeline_search')}}">时间轴视图</a></li> -->
+        </ul>
+        </div>    
+    </span>
+    {% block body%}{% endblock %}
+
+</body>
+</html>

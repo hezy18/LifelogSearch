@@ -1,0 +1,57 @@
+{% extends "Title.html" %}
+{% block head %} 
+    <title>TIMELINE | LIFE RECORD</title>
+    <style>
+        #content{
+            position: absolute;
+            top: 100px;left:10px;
+        }
+        table{
+            border-collapse: separate; border-spacing:20px 8px; 
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <span id='content'>
+        <ul id='img_list'>
+            <li><img src="" alt=""></li>
+        </ul>
+    <table id='imgshow_table'></table>
+    </span>
+
+    <script>
+        var img_list = {{ content |tojson}};
+        img_list = img_list.split(';');
+        // var listul = document.getElementById('img_list');
+        // for(var i=0; i<img_list.length;i++){
+        //     var img_name='/static/LSC2020_images/'.concat(img_list[i]);
+        //     var H = '<img src="'.concat(img_name,'" alt="',img_name,'" width="256" height="192"> ',img_name);
+        //     var li = document.createElement("li");
+        //     li.innerHTML = H;
+        //     listul.appendChild(li);
+        // }
+    var editimgTable = document.getElementById('imgshow_table');
+    for (var j=0;j<img_list.length;j++){
+        var img_name='/static/LSC2020_images/'.concat(img_list[j]);
+        var H1 = '<img src="'.concat(img_name,'" alt="',img_name,'" width="256" height="192"> ');
+        var H4 = "<p>".concat(img_list[j],"</p>");
+        var td1 = document.createElement('td');
+        var td2 = document.createElement('td');
+        td1.innerHTML = H1;
+        td2.innerHTML = H4;//.concat(H2,H3);
+        if(j%4==0){
+            tr1 = document.createElement("tr");
+            tr2 = document.createElement("tr");
+        }
+        // alert(H1);
+        // alert(H4);
+        tr1.appendChild(td1);
+        tr2.appendChild(td2);
+        if(j%4==3 || j==img_list.length-1){
+            editimgTable.appendChild(tr1);
+            editimgTable.appendChild(tr2);
+        }
+    }
+    </script>
+{% endblock %}

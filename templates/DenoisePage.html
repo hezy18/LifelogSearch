@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0; padding: 0;
+            font-family: sans-serif;list-style: none;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        #all{
+            margin-top: 50px;
+            margin-left: 200px;
+        }
+        #all span{
+            position: relative;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id='all'>
+    <form action="/denoise/" method="POST" id="F">
+        <span>
+            No: <input type="text" name="No" id="No"><br>
+        </span>
+        <span id='main'>
+
+        </span>
+        <span>
+            <input type="submit" name='Next' id='Next'>
+        </span>
+    </form>
+    </div>
+
+<script>
+    var all_data = {{content|tojson}};
+    document.getElementById('No').value = String(all_data['No']);
+    var Main = document.getElementById('main');
+    var H1 = "";
+    for(var j=0; j<all_data['img_list'].length;j++){
+        var img_list = all_data['img_list'][j];
+        for(var k=0;k<img_list.length;k++){
+            var img = img_list[k];
+            H1 = H1.concat("<div> <img src='/static/train/",img,"' alt='",img,"' width='256' height='192'>",img,"</div>");
+        }
+        H1 = H1.concat("<div>",all_data['Annotation'][j],"</div>");
+        // H1 = H1.concat('<input type="checkbox" name="accurate',String(j),'" id="accurate',String(j),'">需后续处理<br>');
+        // H1 = H1.concat('<input type="checkbox" name="noise',String(j),'" id="noise',String(j),'">删除<br>');
+    }
+    Main.innerHTML=H1;
+</script>
+
+</body>
+</html>

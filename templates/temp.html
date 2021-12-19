@@ -1,0 +1,264 @@
+
+    <span id='title'>
+        <h1>LIFE RECORD</h1>
+        <div id="navcontainer">
+        <ul class="list-inline">
+            <li><a href="{{url_for('home.home_page')}}">Home</a></li>
+            <li><a href="{{url_for('search.search_page')}}">Image Search</a></li>
+            <li><a href="{{url_for('search.search_page')}}">Timeline</a></li>
+            <li><a href="{{url_for('search.search_page')}}">Statistics</a></li>
+        </ul>
+        </div>    
+    </span>
+
+    <div class="box">
+        <!-- Time search module -->
+        <table>
+            <tHead>
+                <tr align="center">
+                    <th colspan="2"><h2>Time</h2></th>
+                </tr>
+            </tHead>
+            <tBody>
+                <tr>
+                    <td>
+                        <!-- local time -->
+                        <table>
+                            <tHead>
+                                <tr align="center"><th colspan="2"><h3>Local Time</h3></th></tr>
+                            </tHead>
+                            <tBody>
+                                <tr><td>
+                                    {{ form.loc_year.label}}:
+                                    <td>{{form.loc_year(size=10)}}</td>
+                                </td></tr>
+                                <tr><td>
+                                    {{ form.loc_month.label}}:
+                                    <td>{{form.loc_month(size=10)}} </td>
+                                </td></tr>
+                                <tr><td>
+                                    {{ form.loc_day.label}}:
+                                    <td>{{form.loc_day(size=10)}} </td>
+                                </td></tr>
+                                <tr><td>
+                                    {{ form.loc_weekday.label}}:
+                                    <td>{{form.loc_weekday(size=10)}} </td>
+                                </td></tr>
+                                <tr><td>
+                                    {{ form.loc_time.label}}:
+                                    <td>{{form.loc_time(size=10)}} </td>
+                                </td></tr>
+                                <tr><td>
+                                    from {{form.loc_start_time(size=5)}} 
+                                    <td>to {{form.loc_end_time(size=5)}}</td>
+                                </td></tr>
+                            </tBody>    
+                        </table>
+                    </td>
+                    <td>
+                        <!-- utc time -->
+                        <table>
+                            <tHead>
+                                <tr align="center"><th colspan="2"><h3>UTC Time</h3></th></tr>
+                            </tHead>
+                            <tBody>
+                                <tr><td>
+                                    {{ form.utc_year.label}}:
+                                    <td>{{form.utc_year(size=10)}}</td>
+                                </td></tr>
+                                <tr><td>
+                                    {{ form.utc_month.label}}:
+                                    <td>{{form.utc_month(size=10)}} </td>
+                                </td></tr>
+                                <tr><td>
+                                    {{ form.utc_day.label}}:
+                                    <td>{{form.utc_day(size=10)}} </td>
+                                </td></tr>
+                                <tr><td>
+                                    {{ form.utc_weekday.label}}:
+                                    <td>{{form.utc_weekday(size=10)}} </td>
+                                </td></tr>
+                                <tr><td>
+                                    {{ form.utc_time.label}}:
+                                    <td>{{form.utc_time(size=10)}} </td>
+                                </td></tr>
+                                <tr><td>
+                                    from {{form.utc_start_time(size=5)}} 
+                                    <td>to {{form.utc_end_time(size=5)}}</td>
+                                </td></tr>
+                            </tBody>    
+                        </table>
+                    </td>
+                </tr>
+            </tBody>
+        </table>
+    </div>
+    
+    <div>
+        <!-- activity, location, acompanion -->
+        <table>    
+            <tHead>
+                <tr align="center">
+                    <th colspan="2"><h2>Overall Expression</h2></th>
+                </tr>
+            </tHead>
+            <tBody>
+                <tr>
+                    <td>{{form.location.label}}:</td>
+                    <td>{{form.location(size=10)}}</td>
+                </tr>
+                <tr>
+                    <td>{{form.activity.label}}:</td>
+                    <td>{{form.activity(size=10)}}</td>
+                </tr>
+                <tr>
+                    <td>{{form.companion.label}}:</td>
+                    <td>{{form.companion}}</td>
+                </tr>
+                <tr>
+                    <td>{{form.is_moving.label}}:</td>
+                    <td>{{form.is_moving}}</td>
+                </tr>
+            </tBody>
+        </table>
+    </div>
+
+    <div>
+        <!-- Tags -->
+        <table>
+            <tHead>
+                <tr align="center">
+                    <th colspan="3"><h2>Tags</h2></th>
+                </tr>
+            </tHead>
+            <tBody>
+                <tr>
+                    <td>tag</td>
+                    <td>description</td>
+                    <td>position</td>
+                </tr>
+                {% for f in form.tags_list %}
+                <tr>
+                        <td>{{f.tag}}</td>
+                        <td>{{f.desc}}</td>
+                        <td>{{f.position}}</td>
+                </tr>
+                {% endfor %}
+                <!-- <tr> -->
+                    <!-- <td colspan="3">{{form.add_tags}}</td> -->
+                <!-- </tr> -->
+            </tBody>
+        </table>        
+    </div>
+
+    <div>
+        <!-- biometrics -->
+        <table>
+            <tHead>
+                <tr align="center">
+                    <th colspan="3"><h2>Biometrics Logs</h2></th>
+                </tr>
+            </tHead>
+            <tBody>
+                <tr>
+                    <td>{{form.elevation.label}}</td>
+                    <td>{{form.elevation_range}}</td>
+                    <td>{{form.elevation}}</td>
+                </tr>
+                <tr>
+                    <td>{{form.speed.label}}</td>
+                    <td>{{form.speed_range}}</td>
+                    <td>{{form.speed}}</td>
+                </tr>
+                <tr>
+                    <td>{{form.calories.label}}</td>
+                    <td>{{form.calories_range}}</td>
+                    <td>{{form.calories}}</td>
+                </tr>
+                <tr>
+                    <td>{{form.heart.label}}</td>
+                    <td>{{form.heart_range}}</td>
+                    <td>{{form.heart}}</td>
+                </tr>
+                <tr>
+                    <td>{{form.steps.label}}</td>
+                    <td>{{form.steps_range}}</td>
+                    <td>{{form.steps}}</td>
+                </tr>
+            </tBody>
+        </table>
+    </div>
+
+    <div>
+        <!-- future lifelog -->
+        <table>
+            <tHead>
+                <tr align="center">
+                    <th colspan="2"><h2>lifelog in the future 1 hour</h2></th>
+                </tr>
+            </tHead>
+            <tBody>
+                <tr>
+                    <td>{{form.future_location.label}}</td>
+                    <td>{{form.future_location}}</td>
+                </tr>
+                <tr>
+                    <td>{{form.future_activity.label}}</td>
+                    <td>{{form.future_activity}}</td>
+                </tr>
+                <tr>
+                    <td>{{form.future_companion.label}}</td>
+                    <td>{{form.future_companion}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2">{{form.future_tags.label}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2">{{form.future_tags}}</td>
+                </tr>
+            </tBody>
+        </table>
+    </div>
+
+    <div>
+        <!-- past lifelog -->
+        <table>
+            <tHead>
+                <tr align="center">
+                    <th colspan="2"><h2>lifelog in the past 1 hour</h2></th>
+                </tr>
+            </tHead>
+            <tBody>
+                <tr>
+                    <td>{{form.past_location.label}}</td>
+                    <td>{{form.past_location}}</td>
+                </tr>
+                <tr>
+                    <td>{{form.past_activity.label}}</td>
+                    <td>{{form.past_activity}}</td>
+                </tr>
+                <tr>
+                    <td>{{form.past_companion.label}}</td>
+                    <td>{{form.past_companion}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2">{{form.past_tags.label}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2">{{form.past_tags}}</td>
+                </tr>
+            </tBody>
+        </table>
+    </div>
+
+    <table>
+    {% for feed in form.Feedback_list %}
+        <tr>
+            <td>{{feed.one_f.label}}</td>
+            <td>{{feed.one_f}}</td>
+            <td>{{feed.all_f.label}}</td>
+            <td>{{feed.all_f}}</td>
+        </tr>
+    {% endfor %}
+    </table>
+    {{form.submit}}<br>

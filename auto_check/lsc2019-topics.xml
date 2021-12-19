@@ -1,0 +1,776 @@
+<LSC2019>
+    <Topics>
+        <Topic duration='180'>
+            <!-- A Unique Topic ID -->
+            <TopicID>LSC25</TopicID>
+            <TopicType>expert</TopicType>
+            <Descriptions>
+                <Description timestamp='0'>Find the time when I was looking at an old clock, with flowers visible.</Description>
+                <Description timestamp='30'>Find the time when I was looking at an old clock, with flowers visible. There was a lamp also.</Description>
+                <Description timestamp='60'>Find the time when I was looking at an old clock, with flowers visible. There was a lamp also, and a small blue monster (perhaps a long rabbit) watching me. </Description>
+                <Description timestamp='90'>Find the time when I was looking at an old clock, with flowers visible. There was a lamp also, and a small blue monster (perhaps a long rabbit) watching me. Maybe there were two monsters. </Description>
+                <Description timestamp='120'>Find the time when I was looking at an old clock, with flowers visible. There was a lamp also, and a small blue monster (perhaps a long rabbit) watching me. Maybe there were two monsters.  It was a Monday or a Thursday.</Description>
+                <Description timestamp='150'>Find the time when I was looking at an old clock, with flowers visible. There was a lamp also, and a small blue monster (perhaps a long rabbit) watching me. Maybe there were two monsters.  It was a Monday or a Thursday. I was at home and in a bedroom. </Description>
+            </Descriptions>
+            <!-- These are the relevant image IDs for this topic -->
+            <RelevantImageIDs>
+                <ImageID>20160822_061808_000.jpg</ImageID>
+                <ImageID>20160818_155031_000.jpg</ImageID>
+                <ImageID>20160825_163659_000.jpg</ImageID>
+            </RelevantImageIDs>
+        </Topic>
+        <Topic duration='180'>
+            <TopicID>LSC26</TopicID>
+            <TopicType>expert</TopicType>
+            <Descriptions>
+                <Description timestamp='0'>A red car beside a white house.</Description>
+                <Description timestamp='30'>A red car beside a white house on a cloudy day.</Description>
+                <Description timestamp='60'>A red car beside a white house on a cloudy day. I had driven for over an hour to get here. </Description>
+                <Description timestamp='90'>A red car beside a white house on a cloudy day. I had driven for over an hour to get here. It was a Saturday. </Description>
+                <Description timestamp='120'>A red car beside a white house on a cloudy day. I had driven for over an hour to get here. It was a saturday in August.</Description>
+                <Description timestamp='150'>A red car beside a white house on a cloudy day. I had driven for over an hour to get here. It was a saturday in August and it was in the early afternoon.</Description>
+            </Descriptions>
+            <RelevantImageIDs>
+                <ImageID>20160820_131734_000.jpg</ImageID>
+            </RelevantImageIDs>
+        </Topic>
+        <Topic duration='180'>
+            <TopicID>LSC27</TopicID>
+            <TopicType>expert</TopicType>
+            <Descriptions>
+                <Description timestamp='0'>Walking through an airbridge after a flight.</Description>
+                <Description timestamp='30'>Walking through an airbridge after a flight in the early morning.</Description>
+                <Description timestamp='60'>Walking through an airbridge after a flight in the early morning after a flight of about two hours.</Description>
+                <Description timestamp='90'>Walking through an airbridge after a flight in the early morning after a flight of about two hours. After the airport, I immediately got a taxi to a meeting.</Description>
+                <Description timestamp='120'>Walking through an airbridge after a flight in the early morning after a flight of about two hours. After the airport, I immediately got a taxi to a meeting. I think it was a cloudy day on a Monday. </Description>
+                <Description timestamp='150'>Walking through an airbridge after a flight in the early morning after a flight of about two hours. After the airport, I immediately got a taxi to a meeting. I think it was a cloudy day on a Monday. I was in Tromso in Norway.</Description>
+            </Descriptions>
+            <RelevantImageIDs>
+                <ImageID>20160905_074151_000.jpg</ImageID>
+                <ImageID>20160905_074223_000.jpg</ImageID>
+            </RelevantImageIDs>
+        </Topic>
+        <Topic duration='180'>
+            <TopicID>LSC28</TopicID>
+            <TopicType>expert</TopicType>
+            <Descriptions>
+                <Description timestamp='0'>I remember a doll’s house.</Description>
+                <Description timestamp='30'>I remember a doll’s house, a white dolls house.</Description>
+                <Description timestamp='60'>I remember a doll’s house, a white dolls house. There were other people there.</Description>
+                <Description timestamp='90'>I remember a doll’s house, a white dolls house. There were other people there, and candles too, I remember candles. </Description>
+                <Description timestamp='120'>I remember a doll’s house, a white dolls house. There were other people there, and candles too, I remember candles. There was some nice village scene in front of a lake on a picture.</Description>
+                <Description timestamp='150'>I remember a doll’s house, a white dolls house. There were other people there, and candles too, I remember candles. There was some nice village scene in front of a lake on a picture. It was a Saturday.</Description>
+            </Descriptions>
+            <RelevantImageIDs>
+                <ImageID>20160820_170806_000.jpg</ImageID>
+                <ImageID>20160820_170838_000.jpg</ImageID>
+                <ImageID>20160820_170910_000.jpg</ImageID>
+                <ImageID>20160820_170942_000.jpg</ImageID>
+                <ImageID>20160820_171014_000.jpg</ImageID>
+            </RelevantImageIDs>
+        </Topic>
+        <Topic duration='180'>
+            <TopicID>LSC29</TopicID>
+            <TopicType>expert</TopicType>
+            <Descriptions>
+                <Description timestamp='0'>Catching my reflection in the bathroom mirror early on a Saturday morning.</Description>
+                <Description timestamp='30'>Catching my reflection in the bathroom mirror early on a Saturday morning when I was preparing to brush my teeth.</Description>
+                <Description timestamp='60'>Catching my reflection in the bathroom mirror early on a Saturday morning when I was preparing to brush my teeth. There were pink wall tiles.</Description>
+                <Description timestamp='90'>Catching my reflection in the bathroom mirror early on a Saturday morning when I was preparing to brush my teeth. There were pink wall tiles and I was wearing a white shirt.</Description>
+                <Description timestamp='120'>Catching my reflection in the bathroom mirror early on a Saturday morning when I was preparing to brush my teeth. There were pink wall tiles and I was wearing a white shirt. I had just finished watching some TV.</Description>
+                <Description timestamp='150'>Catching my reflection in the bathroom mirror early on a Saturday morning when I was preparing to brush my teeth. There were pink wall tiles and I was wearing a white shirt. I had just finished watching some TV and then I drove somewhere.</Description>
+            </Descriptions>
+            <RelevantImageIDs>
+                <ImageID>20160910_063015_000.jpg</ImageID>
+                <ImageID>20160903_064346_000.jpg</ImageID>
+            </RelevantImageIDs>
+        </Topic>
+        <Topic duration='180'>
+            <TopicID>LSC30</TopicID>
+            <TopicType>expert</TopicType>
+            <Descriptions>
+                <Description timestamp='0'>Pulling up grass or weeds.</Description>
+                <Description timestamp='30'>Pulling up grass or weeds in my garden.</Description>
+                <Description timestamp='60'>Pulling up grass or weeds in my garden on a cloudy day. </Description>
+                <Description timestamp='90'>Pulling up grass or weeds in my garden on a cloudy day. There are trees in my garden.</Description>
+                <Description timestamp='120'>Pulling up grass or weeds in my garden on a cloudy day. There are trees in my garden and more trees just outside across the street. </Description>
+                <Description timestamp='150'>Pulling up grass or weeds in my garden on a cloudy day. There are trees in my garden and more trees just outside across the street. It was a Saturday afternoon.</Description>
+            </Descriptions>
+            <RelevantImageIDs>
+                <ImageID>20160910_122846_000</ImageID>
+            </RelevantImageIDs>
+        </Topic>
+        <Topic duration='180'>
+            <TopicID>LSC31</TopicID>
+            <TopicType>expert</TopicType>
+            <Descriptions>
+                <Description timestamp='0'>Eating fishcakes, bread and salad.</Description>
+                <Description timestamp='30'>Eating fishcakes, bread and salad after preparing my presentation in powerpoint.</Description>
+                <Description timestamp='60'>Eating fishcakes, bread and salad after preparing my presentation in powerpoint. It must have been lunch time.</Description>
+                <Description timestamp='90'>Eating fishcakes, bread and salad after preparing my presentation in powerpoint. It must have been lunch time. There was a guy in a blue sweater.</Description>
+                <Description timestamp='120'>Eating fishcakes, bread and salad after preparing my presentation in powerpoint. It must have been lunch time. There was a guy in a blue sweater. I think there were phones on the table. </Description>
+                <Description timestamp='150'>Eating fishcakes, bread and salad after preparing my presentation in powerpoint. It must have been lunch time. There was a guy in a blue sweater. I think there were phones on the table. After lunch, I made a coffee. </Description>
+            </Descriptions>
+            <RelevantImageIDs>
+                <ImageID>20160905_105848_000.jpg</ImageID>
+                <ImageID>20160905_105920_000.jpg</ImageID>
+                <ImageID>20160905_105952_000.jpg</ImageID>
+                <ImageID>20160905_110024_000.jpg</ImageID>
+                <ImageID>20160905_110056_000.jpg</ImageID>
+                <ImageID>20160905_110128_000.jpg</ImageID>
+                <ImageID>20160905_110200_000.jpg</ImageID>
+                <ImageID>20160905_110232_000.jpg</ImageID>
+                <ImageID>20160905_110304_000.jpg</ImageID>
+                <ImageID>20160905_110336_000.jpg</ImageID>
+                <ImageID>20160905_110408_000.jpg</ImageID>
+                <ImageID>20160905_110440_000.jpg</ImageID>
+                <ImageID>20160905_110512_000.jpg</ImageID>
+                <ImageID>20160905_110544_000.jpg</ImageID>
+                <ImageID>20160905_110616_000.jpg</ImageID>
+                <ImageID>20160905_110648_000.jpg</ImageID>
+                <ImageID>20160905_110720_000.jpg</ImageID>	
+                <ImageID>20160905_110752_000.jpg</ImageID>
+                <ImageID>20160905_110824_000.jpg</ImageID>	
+                <ImageID>20160905_110856_000.jpg</ImageID>	
+                <ImageID>20160905_110928_000.jpg</ImageID>	
+                <ImageID>20160905_111000_000.jpg</ImageID>	
+                <ImageID>20160905_111032_000.jpg</ImageID>	
+                <ImageID>20160905_111104_000.jpg</ImageID>	
+                <ImageID>20160905_111136_000.jpg</ImageID>	
+                <ImageID>20160905_111208_000.jpg</ImageID>	
+                <ImageID>20160905_111240_000.jpg</ImageID>	
+                <ImageID>20160905_111312_000.jpg</ImageID>	
+                <ImageID>20160905_111344_000.jpg</ImageID>	
+                <ImageID>20160905_111416_000.jpg</ImageID>	
+                <ImageID>20160905_111501_000.jpg</ImageID>	
+                <ImageID>20160905_111533_000.jpg</ImageID>	
+                <ImageID>20160905_111605_000.jpg</ImageID>	
+                <ImageID>20160905_111637_000.jpg</ImageID>	
+                <ImageID>20160905_111709_000.jpg</ImageID>	
+                <ImageID>20160905_111741_000.jpg</ImageID>	
+                <ImageID>20160905_111813_000.jpg</ImageID>	
+                <ImageID>20160905_111845_000.jpg</ImageID>	
+                <ImageID>20160905_111917_000.jpg</ImageID>	
+                <ImageID>20160905_111949_000.jpg</ImageID>	
+                <ImageID>20160905_112021_000.jpg</ImageID>	
+                <ImageID>20160905_112053_000.jpg</ImageID>	
+                <ImageID>20160905_112126_000.jpg</ImageID>	
+                <ImageID>20160905_112158_000.jpg</ImageID>	
+                <ImageID>20160905_112230_000.jpg</ImageID>	
+                <ImageID>20160905_112302_000.jpg</ImageID>	
+                <ImageID>20160905_112334_000.jpg</ImageID>	
+                <ImageID>20160905_112406_000.jpg</ImageID>	
+                <ImageID>20160905_112438_000.jpg</ImageID>
+            </RelevantImageIDs>
+        </Topic>
+        <Topic duration='180'>
+            <TopicID>LSC32</TopicID>
+            <TopicType>expert</TopicType>
+            <Descriptions>
+                <Description timestamp='0'>Walking on a green footpath.</Description>
+                <Description timestamp='30'>Walking on a green footpath, to my car. </Description>
+                <Description timestamp='60'>Walking on a green footpath, to my car. I remember i had come off a flight. </Description>
+                <Description timestamp='90'>Walking on a green footpath, to my car. I remember i had come off a flight  and it was around lunch-time.</Description>
+                <Description timestamp='120'>Walking on a green footpath, to my car. I remember i had come off a flight  and it was around lunch-time. I got into my car and drove to a lunch.</Description>
+                <Description timestamp='150'>Walking on a green footpath, to my car. I remember i had come off a flight  and it was around lunch-time. I got into my car and drove to have a meal. No, I drove to work where I had lunch.</Description>
+            </Descriptions>
+            <RelevantImageIDs>
+                <ImageID>20160908_115929_000.jpg</ImageID>
+            </RelevantImageIDs>
+        </Topic>
+        <Topic duration='180'>
+            <TopicID>LSC33</TopicID>
+            <TopicType>novice</TopicType>
+            <Descriptions>
+                <Description timestamp='0'>Ironing clothes.</Description>
+                <Description timestamp='30'>Ironing clothes, in the evening time. </Description>
+                <Description timestamp='60'>Ironing clothes, in the evening time. I was in a hotel room.</Description>
+                <Description timestamp='90'>Ironing clothes, in the evening time. I was in a hotel room with a brown floor.</Description>
+                <Description timestamp='120'>Ironing clothes, in the evening time. I was in a hotel room with a brown floor and I think there was a kettle there. </Description>
+                <Description timestamp='150'>Ironing clothes, in the evening time. I was in a hotel room with a brown floor and I think there was a kettle there. After ironing, i waited a short while then went to a party.</Description>
+            </Descriptions>
+            <RelevantImageIDs>
+                <ImageID>20160905_173210_000.jpg</ImageID>
+                <ImageID>20160905_173243_000.jpg</ImageID>
+                <ImageID>20160905_173315_000.jpg</ImageID>
+                <ImageID>20160905_173347_000.jpg</ImageID>
+                <ImageID>20160905_173420_000.jpg</ImageID>
+                <ImageID>20160905_173452_000.jpg</ImageID>
+                <ImageID>20160905_173524_000.jpg</ImageID>
+                <ImageID>20160905_173556_000.jpg</ImageID>
+                <ImageID>20160905_173628_000.jpg</ImageID>
+                <ImageID>20160905_173659_000.jpg</ImageID>
+                <ImageID>20160905_173732_000.jpg</ImageID>
+                <ImageID>20160905_173804_000.jpg</ImageID>
+                <ImageID>20160905_173836_000.jpg</ImageID>
+                <ImageID>20160905_173908_000.jpg</ImageID>
+                <ImageID>20160905_173939_000.jpg</ImageID>
+                <ImageID>20160905_174012_000.jpg</ImageID>
+                <ImageID>20160905_174044_000.jpg</ImageID>
+                <ImageID>20160905_174116_000.jpg</ImageID>
+                <ImageID>20160905_174148_000.jpg</ImageID>
+                <ImageID>20160905_174232_000.jpg</ImageID>
+            </RelevantImageIDs>
+        </Topic>
+        <Topic duration='180'>
+            <TopicID>LSC34</TopicID>
+            <TopicType>novice</TopicType>
+            <Descriptions>
+                <Description timestamp='0'>Watching an important football game .</Description>
+                <Description timestamp='30'>Watching an important football game on a tablet computer. </Description>
+                <Description timestamp='60'>Watching an important football game on a tablet computer. I had been drinking beer.</Description>
+                <Description timestamp='90'>Watching an important football game on a tablet computer. I had been drinking beer. Oh, I was at a table with friends when drinking beer.</Description>
+                <Description timestamp='120'>Watching an important football game on a tablet computer. I had been drinking beer. Oh, I was at a table with friends when drinking beer, but returned to my hotel room to watch the football.</Description>
+                <Description timestamp='150'>Watching an important football game on a tablet computer. I had been drinking beer. Oh, I was at a table with friends when drinking beer, but returned to my hotel room to watch the football. I wasn’t using the TV in the room for some reason. I was using the tablet. </Description>
+            </Descriptions>
+            <RelevantImageIDs>
+                <ImageID>20160905_202516_000.jpg</ImageID>
+                <ImageID>20160905_202548_000.jpg</ImageID>
+                <ImageID>20160905_202633_000.jpg</ImageID>
+                <ImageID>20160905_202705_000.jpg</ImageID>
+                <ImageID>20160905_202737_000.jpg</ImageID>
+                <ImageID>20160905_202809_000.jpg</ImageID>
+                <ImageID>20160905_202841_000.jpg</ImageID>
+                <ImageID>20160905_202913_000.jpg</ImageID>
+                <ImageID>20160905_202945_000.jpg</ImageID>
+                <ImageID>20160905_203017_000.jpg</ImageID>
+                <ImageID>20160905_203050_000.jpg</ImageID>
+                <ImageID>20160905_203122_000.jpg</ImageID>
+                <ImageID>20160905_203154_000.jpg</ImageID>
+                <ImageID>20160905_203226_000.jpg</ImageID>
+                <ImageID>20160905_203258_000.jpg</ImageID>
+                <ImageID>20160905_203330_000.jpg</ImageID>
+                <ImageID>20160905_203402_000.jpg</ImageID>
+                <ImageID>20160905_203434_000.jpg</ImageID>
+                <ImageID>20160905_203506_000.jpg</ImageID>
+                <ImageID>20160905_203538_000.jpg</ImageID>
+                <ImageID>20160905_203610_000.jpg</ImageID>
+                <ImageID>20160905_203642_000.jpg</ImageID>
+                <ImageID>20160905_203714_000.jpg</ImageID>
+                <ImageID>20160905_203746_000.jpg</ImageID>
+                <ImageID>20160905_203818_000.jpg</ImageID>
+                <ImageID>20160905_203850_000.jpg</ImageID>
+                <ImageID>20160905_203922_000.jpg</ImageID>
+                <ImageID>20160905_203954_000.jpg</ImageID>
+                <ImageID>20160905_204026_000.jpg</ImageID>
+                <ImageID>20160905_204058_000.jpg</ImageID>
+                <ImageID>20160905_204130_000.jpg</ImageID>
+                <ImageID>20160905_204202_000.jpg</ImageID>
+                <ImageID>20160905_204234_000.jpg</ImageID>
+                <ImageID>20160905_204306_000.jpg</ImageID>
+                <ImageID>20160905_204338_000.jpg</ImageID>
+                <ImageID>20160905_204410_000.jpg</ImageID>
+                <ImageID>20160905_204442_000.jpg</ImageID>
+                <ImageID>20160905_204514_000.jpg</ImageID>
+                <ImageID>20160905_204546_000.jpg</ImageID>
+                <ImageID>20160905_204618_000.jpg</ImageID>
+                <ImageID>20160905_204703_000.jpg</ImageID>
+                <ImageID>20160905_204735_000.jpg</ImageID>
+                <ImageID>20160905_204807_000.jpg</ImageID>
+                <ImageID>20160905_204839_000.jpg</ImageID>
+                <ImageID>20160905_204911_000.jpg</ImageID>
+                <ImageID>20160905_205743_000.jpg</ImageID>
+                <ImageID>20160905_210303_000.jpg</ImageID>
+                <ImageID>20160905_210335_000.jpg</ImageID>
+                <ImageID>20160905_210407_000.jpg</ImageID>
+                <ImageID>20160905_210439_000.jpg</ImageID>
+                <ImageID>20160905_210511_000.jpg</ImageID>
+                <ImageID>20160905_210543_000.jpg</ImageID>
+            </RelevantImageIDs>
+        </Topic>
+        <Topic duration='180'>
+            <TopicID>LSC35</TopicID>
+            <TopicType>novice</TopicType>
+            <Descriptions>
+                <Description timestamp='0'>I was shopping for clothes in the early morning. </Description>
+                <Description timestamp='30'>I was shopping for clothes in the early morning. I think I was in Ireland.</Description>
+                <Description timestamp='60'>I was shopping for clothes in the early morning. I think I was in Ireland and I was looking for a shirt and a belt. </Description>
+                <Description timestamp='90'>I was shopping for clothes in the early morning. I think I was in Ireland and I was looking for a shirt and a belt. I don’t think I bought anything.</Description>
+                <Description timestamp='120'>I was shopping for clothes in the early morning. I think I was in Ireland and I was looking for a shirt and a belt. I don’t think I bought anything. I went to a salon instead  and waited for a haircut. </Description>
+                <Description timestamp='150'>I was shopping for clothes in the early morning. I think I was in Ireland and I was looking for a shirt and a belt. I don’t think I bought anything. I went to a salon instead  and waited for a haircut. Yeah, it was a Saturday.</Description>
+            </Descriptions>
+            <RelevantImageIDs>
+                <ImageID>20160910_082730_000.jpg</ImageID>
+                <ImageID>20160910_082802_000.jpg</ImageID>
+                <ImageID>20160910_082834_000.jpg</ImageID>
+                <ImageID>20160910_082919_000.jpg</ImageID>
+                <ImageID>20160910_082951_000.jpg</ImageID>
+            </RelevantImageIDs>
+        </Topic>
+        <Topic duration='180'>
+            <TopicID>LSC36</TopicID>
+            <TopicType>novice</TopicType>
+            <Descriptions>
+                <Description timestamp='0'>I was making coffee in the morning using a professional looking coffee machine.</Description>
+                <Description timestamp='30'>I was making coffee in the morning using a professional looking coffee machine. After making coffee, I was talking to someone.</Description>
+                <Description timestamp='60'>I was making coffee in the morning using a professional looking coffee machine. After making coffee, I was talking to someone. No it was a few people. </Description>
+                <Description timestamp='90'>I was making coffee in the morning using a professional looking coffee machine. After making coffee, I was talking to someone. No it was a few people. I remember yellow doors behind them. </Description>
+                <Description timestamp='120'>I was making coffee in the morning using a professional looking coffee machine. After making coffee, I was talking to someone. No it was a few people. I remember yellow doors behind them. After a few minutes, I went back to work.</Description>
+                <Description timestamp='150'>I was making coffee in the morning using a professional looking coffee machine. After making coffee, I was talking to someone. No it was a few people. I remember yellow doors behind them. After a few minutes, I went back to work. It was a Monday in Norway.</Description>
+            </Descriptions>
+            <RelevantImageIDs>
+                <ImageID>20160905_094313_000.jpg</ImageID>
+                <ImageID>20160905_094345_000.jpg</ImageID>
+                <ImageID>20160905_094417_000.jpg</ImageID>
+                <ImageID>20160905_094449_000.jpg</ImageID>
+                <ImageID>20160905_094521_000.jpg</ImageID>
+                <ImageID>20160905_094553_000.jpg</ImageID>
+                <ImageID>20160905_094625_000.jpg</ImageID>
+                <ImageID>20160905_094657_000.jpg</ImageID>
+            </RelevantImageIDs>
+        </Topic>
+        <Topic duration='180'>
+            <TopicID>LSC37</TopicID>
+            <TopicType>novice</TopicType>
+            <Descriptions>
+                <Description timestamp='0'>I remember I was washing clothes.</Description>
+                <Description timestamp='30'>I remember I was washing clothes. I think it was white shirts. </Description>
+                <Description timestamp='60'>I remember I was washing clothes. I think it was white shirts. Using the clothes washing machine (front loading machine).</Description>
+                <Description timestamp='90'>I remember I was washing clothes. I think it was white shirts. Using the clothes washing machine (front loading machine) in my home.</Description>
+                <Description timestamp='120'>I remember I was washing clothes. I think it was white shirts. Using the clothes washing machine (front loading machine) in my home. I recall all the red lights were turned on; perhaps the machine was broken. </Description>
+                <Description timestamp='150'>I remember I was washing clothes. I think it was white shirts. Using the clothes washing machine (front loading machine) in my home. I recall all the red lights were turned on; perhaps the machine was broken. It was the weekend, a Saturday. </Description>
+            </Descriptions>
+            <RelevantImageIDs>
+                <ImageID>20160910_124325_000.jpg</ImageID>
+            </RelevantImageIDs>
+        </Topic>
+        <Topic duration='180'>
+            <TopicID>LSC38</TopicID>
+            <TopicType>novice</TopicType>
+            <Descriptions>
+                <Description timestamp='0'>I was in my office taking a skype call.</Description>
+                <Description timestamp='30'>I was in my office taking a skype call on a Friday morning. </Description>
+                <Description timestamp='60'>I was in my office taking a skype call on a Friday morning. I clearly remember a bright green background on my laptop.</Description>
+                <Description timestamp='90'>I was in my office taking a skype call on a Friday morning. I clearly remember a bright green background on my laptop and a large image of a man’s face on the screen. </Description>
+                <Description timestamp='120'>I was in my office taking a skype call on a Friday morning. I clearly remember a bright green background on my laptop and a large image of a man’s face on the screen. I had previously been having coffee in the Helix.</Description>
+                <Description timestamp='150'>I was in my office taking a skype call on a Friday morning. I clearly remember a bright green background on my laptop and a large image of a man’s face on the screen. I had previously been having coffee in the Helix. I recall that it was a Friday.</Description>
+            </Descriptions>
+            <RelevantImageIDs>
+                <ImageID>20160909_085326_000.jpg</ImageID>
+                <ImageID>20160909_085358_000.jpg</ImageID>
+                <ImageID>20160909_085534_000.jpg</ImageID>
+            </RelevantImageIDs>
+        </Topic>
+        <Topic duration='180'>
+            <TopicID>LSC39</TopicID>
+            <TopicType>novice</TopicType>
+            <Descriptions>
+                <Description timestamp='0'>Watching people speak in a crowded auditorium.</Description>
+                <Description timestamp='30'>Watching people speak in a crowded auditorium. They were talking about ‘automated futures’. </Description>
+                <Description timestamp='60'>Watching people speak in a crowded auditorium. They were talking about ‘automated futures’. It was full of people.</Description>
+                <Description timestamp='90'>Watching people speak in a crowded auditorium. They were talking about ‘automated futures’. It was full of people and I was at the back of the room.</Description>
+                <Description timestamp='120'>Watching people speak in a crowded auditorium. They were talking about ‘automated futures’. It was full of people and I was at the back of the room.  Afterwards I went for a walk through a historical university campus.</Description>
+                <Description timestamp='150'>Watching people speak in a crowded auditorium. They were talking about ‘automated futures’. It was full of people and I was at the back of the room.  Afterwards I went for a walk through a historical university campus on a Thursday evening.</Description>
+            </Descriptions>
+            <RelevantImageIDs>
+                <ImageID>20160908_172759_000.jpg</ImageID>
+                <ImageID>20160908_172831_000.jpg</ImageID>
+                <ImageID>20160908_172903_000.jpg</ImageID>
+                <ImageID>20160908_172935_000.jpg</ImageID>
+                <ImageID>20160908_173007_000.jpg</ImageID>
+                <ImageID>20160908_173039_000.jpg</ImageID>
+                <ImageID>20160908_173111_000.jpg</ImageID>
+                <ImageID>20160908_173143_000.jpg</ImageID>
+                <ImageID>20160908_173215_000.jpg</ImageID>
+                <ImageID>20160908_173247_000.jpg</ImageID>
+                <ImageID>20160908_173319_000.jpg</ImageID>
+                <ImageID>20160908_173351_000.jpg</ImageID>
+                <ImageID>20160908_173423_000.jpg</ImageID>
+                <ImageID>20160908_173456_000.jpg</ImageID>
+                <ImageID>20160908_173541_000.jpg</ImageID>
+                <ImageID>20160908_173613_000.jpg</ImageID>
+                <ImageID>20160908_173645_000.jpg</ImageID>
+                <ImageID>20160908_173717_000.jpg</ImageID>
+                <ImageID>20160908_173749_000.jpg</ImageID>
+                <ImageID>20160908_173821_000.jpg</ImageID>
+                <ImageID>20160908_173853_000.jpg</ImageID>
+                <ImageID>20160908_173925_000.jpg</ImageID>
+                <ImageID>20160908_173957_000.jpg</ImageID>
+                <ImageID>20160908_174029_000.jpg</ImageID>
+                <ImageID>20160908_174101_000.jpg</ImageID>
+                <ImageID>20160908_174133_000.jpg</ImageID>
+                <ImageID>20160908_174205_000.jpg</ImageID>
+                <ImageID>20160908_174237_000.jpg</ImageID>
+                <ImageID>20160908_174309_000.jpg</ImageID>
+                <ImageID>20160908_174341_000.jpg</ImageID>
+                <ImageID>20160908_174413_000.jpg</ImageID>
+                <ImageID>20160908_174445_000.jpg</ImageID>
+                <ImageID>20160908_174517_000.jpg</ImageID>
+                <ImageID>20160908_174549_000.jpg</ImageID>
+                <ImageID>20160908_174621_000.jpg</ImageID>
+                <ImageID>20160908_174653_000.jpg</ImageID>
+                <ImageID>20160908_174725_000.jpg</ImageID>
+                <ImageID>20160908_174757_000.jpg</ImageID>
+                <ImageID>20160908_174829_000.jpg</ImageID>
+                <ImageID>20160908_174901_000.jpg</ImageID>
+                <ImageID>20160908_174933_000.jpg</ImageID>
+                <ImageID>20160908_175006_000.jpg</ImageID>
+                <ImageID>20160908_175038_000.jpg</ImageID>
+                <ImageID>20160908_175110_000.jpg</ImageID>
+                <ImageID>20160908_175142_000.jpg</ImageID>
+                <ImageID>20160908_175214_000.jpg</ImageID>
+                <ImageID>20160908_175246_000.jpg</ImageID>
+                <ImageID>20160908_175318_000.jpg</ImageID>
+                <ImageID>20160908_175350_000.jpg</ImageID>
+                <ImageID>20160908_175422_000.jpg</ImageID>
+                <ImageID>20160908_175454_000.jpg</ImageID>
+                <ImageID>20160908_175526_000.jpg</ImageID>
+                <ImageID>20160908_175611_000.jpg</ImageID>
+                <ImageID>20160908_175643_000.jpg</ImageID>
+                <ImageID>20160908_175715_000.jpg</ImageID>
+                <ImageID>20160908_175747_000.jpg</ImageID>
+                <ImageID>20160908_175819_000.jpg</ImageID>
+                <ImageID>20160908_175851_000.jpg</ImageID>
+                <ImageID>20160908_175923_000.jpg</ImageID>
+                <ImageID>20160908_175955_000.jpg</ImageID>
+                <ImageID>20160908_180027_000.jpg</ImageID>
+                <ImageID>20160908_180059_000.jpg</ImageID>
+                <ImageID>20160908_180131_000.jpg</ImageID>
+                <ImageID>20160908_180203_000.jpg</ImageID>
+                <ImageID>20160908_180235_000.jpg</ImageID>
+                <ImageID>20160908_180307_000.jpg</ImageID>
+                <ImageID>20160908_180339_000.jpg</ImageID>
+                <ImageID>20160908_180411_000.jpg</ImageID>
+                <ImageID>20160908_180443_000.jpg</ImageID>
+                <ImageID>20160908_180516_000.jpg</ImageID>
+                <ImageID>20160908_180548_000.jpg</ImageID>
+                <ImageID>20160908_180620_000.jpg</ImageID>
+                <ImageID>20160908_180652_000.jpg</ImageID>
+                <ImageID>20160908_180724_000.jpg</ImageID>
+                <ImageID>20160908_180756_000.jpg</ImageID>
+                <ImageID>20160908_180828_000.jpg</ImageID>
+                <ImageID>20160908_180900_000.jpg</ImageID>
+                <ImageID>20160908_180932_000.jpg</ImageID>
+                <ImageID>20160908_181004_000.jpg</ImageID>
+                <ImageID>20160908_181036_000.jpg</ImageID>
+                <ImageID>20160908_181108_000.jpg</ImageID>
+                <ImageID>20160908_181140_000.jpg</ImageID>
+                <ImageID>20160908_181212_000.jpg</ImageID>
+                <ImageID>20160908_181244_000.jpg</ImageID>
+                <ImageID>20160908_181316_000.jpg</ImageID>
+                <ImageID>20160908_181348_000.jpg</ImageID>
+                <ImageID>20160908_181420_000.jpg</ImageID>
+                <ImageID>20160908_181452_000.jpg</ImageID>
+            </RelevantImageIDs>
+        </Topic>
+        <Topic duration='180'>
+            <TopicID>LSC40</TopicID>
+            <TopicType>novice</TopicType>
+            <Descriptions>
+                <Description timestamp='0'>There was car racing.</Description>
+                <Description timestamp='30'>There was car racing on TV. It was Formula 1 motor racing. </Description>
+                <Description timestamp='60'>There was car racing on TV. It was Formula 1 motor racing. I was at home.</Description>
+                <Description timestamp='90'>There was car racing on TV.It was Formula 1 motor racing. I was at home with other people. </Description>
+                <Description timestamp='120'>There was car racing on TV. It was Formula 1 motor racing. I was at home with two people on a Saturday.</Description>
+                <Description timestamp='150'>There was car racing on TV.It was Formula 1 motor racing. I was at home with two other people on a Saturday. This was after going shopping.</Description>
+            </Descriptions>
+            <RelevantImageIDs>
+                <ImageID>20160903_113638_000.jpg</ImageID>	
+                <ImageID>20160903_113710_000.jpg</ImageID>
+                <ImageID>20160903_113742_000.jpg</ImageID>	
+                <ImageID>20160903_113814_000.jpg</ImageID>
+                <ImageID>20160903_113846_000.jpg</ImageID>
+                <ImageID>20160903_113918_000.jpg</ImageID>
+                <ImageID>20160903_113950_000.jpg</ImageID>	
+                <ImageID>20160903_114022_000.jpg</ImageID>
+                <ImageID>20160903_114054_000.jpg</ImageID>
+                <ImageID>20160903_114126_000.jpg</ImageID>
+                <ImageID>20160903_114158_000.jpg</ImageID>
+                <ImageID>20160903_114230_000.jpg</ImageID>
+                <ImageID>20160903_114302_000.jpg</ImageID>
+                <ImageID>20160903_114334_000.jpg</ImageID>
+                <ImageID>20160903_114419_000.jpg</ImageID>
+                <ImageID>20160903_114451_000.jpg</ImageID>
+                <ImageID>20160903_114523_000.jpg</ImageID>
+                <ImageID>20160903_114555_000.jpg</ImageID>
+                <ImageID>20160903_114627_000.jpg</ImageID>
+                <ImageID>20160903_114659_000.jpg</ImageID>
+                <ImageID>20160903_114731_000.jpg</ImageID>
+                <ImageID>20160903_114803_000.jpg</ImageID>
+                <ImageID>20160903_114835_000.jpg</ImageID>
+                <ImageID>20160903_114907_000.jpg</ImageID>
+                <ImageID>20160903_115038_000.jpg</ImageID>
+                <ImageID>20160903_115110_000.jpg</ImageID>
+                <ImageID>20160903_115142_000.jpg</ImageID>
+                <ImageID>20160903_115214_000.jpg</ImageID>
+                <ImageID>20160903_115246_000.jpg</ImageID>
+                <ImageID>20160903_115318_000.jpg</ImageID>
+                <ImageID>20160903_115350_000.jpg</ImageID>
+                <ImageID>20160903_115422_000.jpg</ImageID>
+                <ImageID>20160903_115454_000.jpg</ImageID>
+                <ImageID>20160903_115526_000.jpg</ImageID>
+                <ImageID>20160903_115558_000.jpg</ImageID>
+                <ImageID>20160903_115630_000.jpg</ImageID>
+                <ImageID>20160903_115702_000.jpg</ImageID>
+                <ImageID>20160903_115734_000.jpg</ImageID>
+                <ImageID>20160903_115806_000.jpg</ImageID>
+                <ImageID>20160903_115838_000.jpg</ImageID>
+                <ImageID>20160903_115910_000.jpg</ImageID>
+                <ImageID>20160903_115942_000.jpg</ImageID>
+                <ImageID>20160903_120014_000.jpg</ImageID>
+                <ImageID>20160903_120046_000.jpg</ImageID>
+                <ImageID>20160903_120118_000.jpg</ImageID>
+                <ImageID>20160903_120150_000.jpg</ImageID>
+                <ImageID>20160903_120222_000.jpg</ImageID>
+                <ImageID>20160903_120254_000.jpg</ImageID>
+                <ImageID>20160903_120326_000.jpg</ImageID>
+                <ImageID>20160903_120358_000.jpg</ImageID>
+                <ImageID>20160903_120443_000.jpg</ImageID>
+                <ImageID>20160903_120515_000.jpg</ImageID>
+                <ImageID>20160903_120547_000.jpg</ImageID>
+                <ImageID>20160903_120619_000.jpg</ImageID>
+                <ImageID>20160903_120651_000.jpg</ImageID>
+                <ImageID>20160903_120723_000.jpg</ImageID>
+                <ImageID>20160903_120755_000.jpg</ImageID>
+                <ImageID>20160903_120827_000.jpg</ImageID>
+                <ImageID>20160903_120859_000.jpg</ImageID>
+                <ImageID>20160903_120931_000.jpg</ImageID>
+                <ImageID>20160903_121003_000.jpg</ImageID>
+                <ImageID>20160903_121035_000.jpg</ImageID>
+                <ImageID>20160903_121107_000.jpg</ImageID>
+                <ImageID>20160903_121139_000.jpg</ImageID>
+                <ImageID>20160903_121211_000.jpg</ImageID>
+                <ImageID>20160903_121243_000.jpg</ImageID>
+                <ImageID>20160903_121315_000.jpg</ImageID>
+                <ImageID>20160903_121347_000.jpg</ImageID>
+                <ImageID>20160903_121419_000.jpg</ImageID>
+                <ImageID>20160903_121451_000.jpg</ImageID>
+                <ImageID>20160903_121523_000.jpg</ImageID>	
+                <ImageID>20160903_121555_000.jpg</ImageID>
+                <ImageID>20160903_121627_000.jpg</ImageID>
+                <ImageID>20160903_121659_000.jpg</ImageID>
+                <ImageID>20160903_121731_000.jpg</ImageID>
+                <ImageID>20160903_121803_000.jpg</ImageID>
+                <ImageID>20160903_121835_000.jpg</ImageID>
+                <ImageID>20160903_121907_000.jpg</ImageID>
+                <ImageID>20160903_121939_000.jpg</ImageID>
+                <ImageID>20160903_122011_000.jpg</ImageID>
+                <ImageID>20160903_122043_000.jpg</ImageID>
+                <ImageID>20160903_122115_000.jpg</ImageID>
+                <ImageID>20160903_122147_000.jpg</ImageID>
+                <ImageID>20160903_122219_000.jpg</ImageID>
+                <ImageID>20160903_122251_000.jpg</ImageID>
+                <ImageID>20160903_122323_000.jpg</ImageID>
+                <ImageID>20160903_122355_000.jpg</ImageID>
+                <ImageID>20160903_122427_000.jpg</ImageID>
+                <ImageID>20160903_122512_000.jpg</ImageID>
+                <ImageID>20160903_122544_000.jpg</ImageID>
+                <ImageID>20160903_122616_000.jpg</ImageID>
+                <ImageID>20160903_122648_000.jpg</ImageID>
+                <ImageID>20160903_122720_000.jpg</ImageID>	
+                <ImageID>20160903_122752_000.jpg</ImageID>
+            </RelevantImageIDs>
+        </Topic>
+        <Topic duration='180'>
+            <TopicID>LSC41</TopicID>
+            <TopicType>extra</TopicType>
+            <Descriptions>
+                <Description timestamp='0'>Unix book.</Description>
+                <Description timestamp='30'>Unix book. I was looking at books. </Description>
+                <Description timestamp='60'>Unix book. I was looking at books. There was a big book on the UNIX operating system.</Description>
+                <Description timestamp='90'>Unix book. I was looking at books. There was a big book on the UNIX operating system. I remember reaching for an orange book. </Description>
+                <Description timestamp='120'>Unix book. I was looking at books. There was a big book on the UNIX operating system. I remember reaching for an orange book. I was in my office.</Description>
+                <Description timestamp='150'>Unix book. I was looking at books. There was a big book on the UNIX operating system. I remember reaching for an orange book. I was in my office in the evening time.</Description>
+            </Descriptions>
+            <RelevantImageIDs>
+                <ImageID>20160902_171906_000</ImageID>
+            </RelevantImageIDs>
+        </Topic>
+        <Topic duration='180'>
+            <TopicID>LSC42</TopicID>
+            <TopicType>extra</TopicType>
+            <Descriptions>
+                <Description timestamp='0'>I was sending a congratulations wish.</Description>
+                <Description timestamp='30'>I was sending a congratulations wish to my niece who finished her exams (the ‘leaving cert’).</Description>
+                <Description timestamp='60'>I was sending a congratulations wish to my niece who finished her exams (the ‘leaving cert’). I was writing on a card.</Description>
+                <Description timestamp='90'>I was sending a congratulations wish to my niece who finished her exams (the ‘leaving cert’). I was writing on a card. It was a Congratulations card.</Description>
+                <Description timestamp='120'>I was sending a congratulations wish to my niece who finished her exams (the ‘leaving cert’). I was writing on a card. It was a Congratulations card. I put it in a white envelope.</Description>
+                <Description timestamp='150'>I was sending a congratulations wish to my niece who finished her exams (the ‘leaving cert’). I was writing on a card. It was a Congratulations card. I put it in a white envelope when was in their home, beside a window in front of the tv.</Description>
+            </Descriptions>
+            <RelevantImageIDs>
+                <ImageID>20160820_114717_000.jpg</ImageID>	
+                <ImageID>20160820_114749_000.jpg</ImageID>
+            </RelevantImageIDs>
+        </Topic>
+        <Topic duration='180'>
+            <TopicID>LSC43</TopicID>
+            <TopicType>extra</TopicType>
+            <Descriptions>
+                <Description timestamp='0'>Playing a word game.</Description>
+                <Description timestamp='30'>Playing a word game on the refrigerator door.</Description>
+                <Description timestamp='60'>Playing a word game on the refrigerator door in the kitchen. </Description>
+                <Description timestamp='90'>Playing a word game on the refrigerator door in the kitchen.  No, it was not in my home; someone else's.</Description>
+                <Description timestamp='120'>Playing a word game on the refrigerator door in the kitchen.  No, it was not in my home; someone else's.  There was a girl in a white or green top.</Description>
+                <Description timestamp='150'>Playing a word game on the refrigerator door in the kitchen.  No, it was not in my home; someone else's.  There was a girl in a white or green top. I remember writing a word TURRET.</Description>
+            </Descriptions>
+            <RelevantImageIDs>
+                <ImageID>20160820_163549_000.jpg</ImageID>
+                <ImageID>20160820_160011_000.jpg</ImageID>
+                <ImageID>20160820_160056_000.jpg</ImageID>
+                <ImageID>20160820_160128_000.jpg</ImageID>
+                <ImageID>20160820_160408_000.jpg</ImageID>
+                <ImageID>20160820_160440_000.jpg</ImageID>
+                <ImageID>20160820_160512_000.jpg</ImageID>
+                <ImageID>20160820_160544_000.jpg</ImageID>
+                <ImageID>20160820_160616_000.jpg</ImageID>
+                <ImageID>20160820_160648_000.jpg</ImageID>
+                <ImageID>20160820_160720_000.jpg</ImageID>
+                <ImageID>20160820_160752_000.jpg</ImageID>
+                <ImageID>20160820_160824_000.jpg</ImageID>
+                <ImageID>20160820_160856_000.jpg</ImageID>
+                <ImageID>20160820_160928_000.jpg</ImageID>
+                <ImageID>20160820_161000_000.jpg</ImageID>
+            </RelevantImageIDs>
+        </Topic>
+        <Topic duration='180'>
+            <TopicID>LSC44</TopicID>
+            <TopicType>extra</TopicType>
+            <Descriptions>
+                <Description timestamp='0'>I was in the bank.</Description>
+                <Description timestamp='30'>I was in the bank. No, I was waiting at the bank.</Description>
+                <Description timestamp='60'>I was in the bank. No, I was waiting at the bank. There was a screen advertising to me.</Description>
+                <Description timestamp='90'>I was in the bank. No, I was waiting at the bank. There was a screen advertising to me and a big blue chair shaped like a B.</Description>
+                <Description timestamp='120'>I was in the bank. No, I was waiting at the bank. There was a screen advertising to me and a big blue chair shaped like a B. I gave up waiting.</Description>
+                <Description timestamp='150'>I was in the bank. No, I was waiting at the bank. There was a screen advertising to me and a big blue chair shaped like a B. I gave up waiting. I went back to my office.</Description>
+            </Descriptions>
+            <RelevantImageIDs>
+                <ImageID>20160902_100830_000.jpg</ImageID>
+                <ImageID>20160902_100902_000.jpg</ImageID>
+                <ImageID>20160902_100934_000.jpg</ImageID>
+                <ImageID>20160902_101006_000.jpg</ImageID>
+                <ImageID>20160902_101038_000.jpg</ImageID>
+                <ImageID>20160902_101110_000.jpg</ImageID>
+                <ImageID>20160902_101142_000.jpg</ImageID>
+                <ImageID>20160902_101214_000.jpg</ImageID>
+                <ImageID>20160902_101246_000.jpg</ImageID>
+                <ImageID>20160902_101318_000.jpg</ImageID>
+                <ImageID>20160902_101350_000.jpg</ImageID>
+                <ImageID>20160902_101422_000.jpg</ImageID>
+                <ImageID>20160902_101454_000.jpg</ImageID>
+                <ImageID>20160902_101526_000.jpg</ImageID>
+                <ImageID>20160902_101558_000.jpg</ImageID>
+                <ImageID>20160902_101630_000.jpg</ImageID>
+                <ImageID>20160902_101702_000.jpg</ImageID>
+                <ImageID>20160902_101734_000.jpg</ImageID>
+                <ImageID>20160902_101806_000.jpg</ImageID>
+                <ImageID>20160902_101838_000.jpg</ImageID>
+                <ImageID>20160902_101910_000.jpg</ImageID>
+                <ImageID>20160902_101942_000.jpg</ImageID>
+                <ImageID>20160902_102027_000.jpg</ImageID>
+                <ImageID>20160902_102059_000.jpg</ImageID>
+                <ImageID>20160902_102131_000.jpg</ImageID>
+                <ImageID>20160902_102203_000.jpg</ImageID>
+                <ImageID>20160902_102235_000.jpg</ImageID>
+                <ImageID>20160902_102307_000.jpg</ImageID>
+                <ImageID>20160902_102339_000.jpg</ImageID>
+                <ImageID>20160902_102411_000.jpg</ImageID>
+                <ImageID>20160902_102443_000.jpg</ImageID>
+                <ImageID>20160902_102515_000.jpg</ImageID>
+                <ImageID>20160902_102547_000.jpg</ImageID>
+                <ImageID>20160902_102619_000.jpg</ImageID>
+                <ImageID>20160902_102651_000.jpg</ImageID>
+                <ImageID>20160902_102723_000.jpg</ImageID>
+                <ImageID>20160902_102755_000.jpg</ImageID>
+                <ImageID>20160902_102828_000.jpg</ImageID>
+                <ImageID>20160902_102900_000.jpg</ImageID>
+            </RelevantImageIDs>
+        </Topic>
+        <Topic duration='180'>
+            <TopicID>LSC45</TopicID>
+            <TopicType>extra</TopicType>
+            <Descriptions>
+                <Description timestamp='0'>A childrens rocking horse.</Description>
+                <Description timestamp='30'>A childrens rocking horse. It was white.</Description>
+                <Description timestamp='60'>A childrens rocking horse. It was white. It was under a clock. </Description>
+                <Description timestamp='90'>A childrens rocking horse. It was white. It was under a clock.  The room has black floor.</Description>
+                <Description timestamp='120'>A childrens rocking horse. It was white. It was under a clock.  The room has black floor and there was a table or a sitting chair in the room. </Description>
+                <Description timestamp='150'>A childrens rocking horse. It was white. It was under a clock.  The room has black floor and there was a table or a sitting chair in the room. I remember it was bright outside.</Description>
+            </Descriptions>
+            <RelevantImageIDs>
+                <ImageID>20160820_155243_000.jpg</ImageID>
+                <ImageID>20160820_155731_000.jpg</ImageID>
+                <ImageID>20160820_155243_000.jpg</ImageID>
+                <ImageID>20160820_155731_000.jpg</ImageID>
+                <ImageID>20160820_163445_000.jpg</ImageID>
+                <ImageID>20160820_163725_000.jpg</ImageID>
+                <ImageID>20160820_171430_000.jpg</ImageID>
+            </RelevantImageIDs>
+        </Topic>
+        <Topic duration='180'>
+            <TopicID>LSC46</TopicID>
+            <TopicType>extra</TopicType>
+            <Descriptions>
+                <Description timestamp='0'>Checking out of a hotel in the early morning, before six am. </Description>
+                <Description timestamp='30'>Checking out of a hotel in the early morning, before six am.  I think there were screens on the right side.</Description>
+                <Description timestamp='60'>Checking out of a hotel in the early morning, before six am.  I think there were screens on the right side. I was taking a flight to somewhere.</Description>
+                <Description timestamp='90'>Checking out of a hotel in the early morning, before six am.  I think there were screens on the right side. I was taking a flight to somewhere. and I needed to walk a sort distance to the airport.</Description>
+                <Description timestamp='120'>Checking out of a hotel in the early morning, before six am.  I think there were screens on the right side. I was taking a flight to somewhere. and I needed to walk a sort distance to the airport on a beautiful day. </Description>
+                <Description timestamp='150'>Checking out of a hotel in the early morning, before six am.  I think there were screens on the right side. I was taking a flight to somewhere. and I needed to walk a sort distance to the airport on a beautiful day. I was in Norway.</Description>
+            </Descriptions>
+            <RelevantImageIDs>
+                <ImageID>20160905_041844_000.jpg</ImageID>
+                <ImageID>20160905_041812_000.jpg</ImageID>
+            </RelevantImageIDs>
+        </Topic>
+        <Topic duration='180'>
+            <TopicID>LSC47</TopicID>
+            <TopicType>extra</TopicType>
+            <Descriptions>
+                <Description timestamp='0'>Painting in the evening.</Description>
+                <Description timestamp='30'>Painting in the evening in my kitchen on a Friday.</Description>
+                <Description timestamp='60'>Painting in the evening in my kitchen on a Friday. I was painting a wall.</Description>
+                <Description timestamp='90'>Painting in the evening in my kitchen on a Friday. I was painting a wall. With a light brown colour.</Description>
+                <Description timestamp='120'>Painting in the evening in my kitchen on a Friday.I was painting a wall. With a light brown colour. I was using a small pot of test colour paint. </Description>
+                <Description timestamp='150'>Painting in the evening in my kitchen on a Friday. I was painting a wall. With a light brown colour. I was using a small pot of test colour paint. I only did a little, then I went to read on my bed.</Description>
+            </Descriptions>
+            <RelevantImageIDs>
+                <ImageID>20160819_194430_000.jpg</ImageID>
+                <ImageID>20160819_194634_000.jpg</ImageID>
+                <ImageID>20160819_194736_000.jpg</ImageID>
+                <ImageID>20160819_195042_000.jpg</ImageID>
+            </RelevantImageIDs>
+        </Topic>
+        <Topic duration='180'>
+            <TopicID>LSC48</TopicID>
+            <TopicType>extra</TopicType>
+            <Descriptions>
+                <Description timestamp='0'>Drinking tea from a large black cup when I was visiting a family member.</Description>
+                <Description timestamp='30'>Drinking tea from a large black cup when I was visiting a family member. There were other people there also. </Description>
+                <Description timestamp='60'>Drinking tea from a large black cup when I was visiting a family member. There were other people there also. I think there was a hen or a cock on the table. </Description>
+                <Description timestamp='90'>Drinking tea from a large black cup when I was visiting a family member. There were other people there also. I think there was a hen or a cock on the table. There was some kind of pie also. </Description>
+                <Description timestamp='120'>Drinking tea from a large black cup when I was visiting a family member. There were other people there also. I think there was a hen or a cock on the table. There was some kind of pie also. I don’t think I ate any pie though.</Description>
+                <Description timestamp='150'>Drinking tea from a large black cup when I was visiting a family member. There were other people there also. I think there was a hen or a cock on the table. There was some kind of pie also. I don’t think I ate any pie though. It was a Saturday.</Description>
+            </Descriptions>
+            <RelevantImageIDs>
+                <ImageID>20160820_140008_000.jpg</ImageID>
+                <ImageID>20160820_161032_000.jpg</ImageID>
+                <ImageID>20160820_161104_000.jpg</ImageID>
+                <ImageID>20160820_161312_000.jpg</ImageID>
+                <ImageID>20160820_161344_000.jpg</ImageID>
+                <ImageID>20160820_161416_000.jpg</ImageID>
+                <ImageID>20160820_161448_000.jpg</ImageID>
+                <ImageID>20160820_161520_000.jpg</ImageID>
+                <ImageID>20160820_161552_000.jpg</ImageID>
+                <ImageID>20160820_161624_000.jpg</ImageID>
+                <ImageID>20160820_161656_000.jpg</ImageID>
+                <ImageID>20160820_161728_000.jpg</ImageID>
+                <ImageID>20160820_161800_000.jpg</ImageID>
+                <ImageID>20160820_161832_000.jpg</ImageID>
+                <ImageID>20160820_161904_000.jpg</ImageID>
+                <ImageID>20160820_161936_000.jpg</ImageID>
+                <ImageID>20160820_162008_000.jpg</ImageID>
+                <ImageID>20160820_162040_000.jpg</ImageID>
+                <ImageID>20160820_162125_000.jpg</ImageID>
+                <ImageID>20160820_162157_000.jpg</ImageID>
+                <ImageID>20160820_162229_000.jpg</ImageID>
+                <ImageID>20160820_162301_000.jpg</ImageID>
+                <ImageID>20160820_162333_000.jpg</ImageID>
+                <ImageID>20160820_162405_000.jpg</ImageID>
+                <ImageID>20160820_162437_000.jpg</ImageID>
+                <ImageID>20160820_162509_000.jpg</ImageID>
+                <ImageID>20160820_162541_000.jpg</ImageID>
+                <ImageID>20160820_162925_000.jpg</ImageID>
+            </RelevantImageIDs>
+        </Topic>
+      </Topics>
+</LSC2019>

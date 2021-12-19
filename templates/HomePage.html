@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet type=text/css href="{{ url_for('static',filename='css/HomePage.css') }}">
+    <title>HOME | LIFE RECORD:Your Lifelog Manager</title>
+</head>
+
+<body>
+    <div id='allpage'> 
+    <div id="box">
+        <div id='title'><span id='h1'>LIFE RECORD</span></div>
+        <div id='search'><a href="{{url_for('search.search_page')}}">Start Searching Now!</a></div>
+        <div id='other'>
+        <span id='left'><a href="{{url_for('image_search.img_search')}}">Search By Image</a></span>                
+        <span id='right'><a href="{{url_for('timeline.timeline_search')}}">View Time Line</a></span>
+        </div>
+        <div id='contact'>
+            <a href="mailto:lijiayu16@mails.tsinghua.edu.cn">Contact us</a>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

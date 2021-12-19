@@ -1,0 +1,106 @@
+{% extends "Title.html" %}
+{% block head %} 
+    <title>IMAGE RESULT | LIFE RECORD</title>
+    <style>
+        #search{
+            position: absolute;
+            top:110px;width:30%;
+            border-right: 4px solid gray;
+        }
+        .part{
+            position: relative;
+            width: 100%;
+        }
+        #images{
+            position: absolute;
+            top:270px; width: 84%; left:10%;
+            border-left: 2px solid #b2bec3;
+            border-right: 2px solid #b2bec3;
+        }
+        #subtitle{
+            position: absolute;
+            top:110px; height:140px;
+            width: 84%;
+            left:8%;
+            border-bottom: 3px solid #81ecec;
+        } 
+        #subtext{
+            position: absolute;
+            left: 10px;
+            height:128px; width: 300px;
+            line-height:128px;
+            font-size:24px;
+            font-weight: bold;
+            display: block;
+        }
+        #query{
+            position: absolute;
+            left:320px;   
+        }
+        
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div id="subtitle">
+        <span id="subtext">
+            <img src="/static/icons/list_2.png" alt="" height="24">
+            <!-- 查询图片: -->
+            Images Similar With:
+        </span>
+        <img id='query' src="/{{result['query_img']}}" alt="{{result['query_img']}}" height="128">
+    </div>
+    <div id='images'>
+        <table id='imgshow_table'>
+        </table>
+    </div>
+
+<script>
+    var all_data = {{ result|tojson}};
+    var key_list = all_data['img_key_list'];
+    var img_list = all_data['img_all_list'];
+    var extra_info = all_data['extra_info'];
+    var editimgTable = document.getElementById('imgshow_table');
+    for (var j=0;j<key_list.length;j++){
+        var H0 = "";
+        if (extra_info[j]['speed']!='-1')
+            H0 = H0.concat("average speed: ",extra_info[j]['speed'],'\n');
+        if (extra_info[j]['calories']!='-1')
+            H0 = H0.concat("calories: ",extra_info[j]['calories'],'\n');
+        if (extra_info[j]['heart']!='-1')
+            H0 = H0.concat("average heart rate: ",extra_info[j]['heart'],'\n');
+        if (extra_info[j]['steps']!='-1')
+            H0 = H0.concat("total steps:",extra_info[j]['steps'],'\n');
+        var H1 = "<div> <img src='/static/".concat(img_list[j][0],"' alt='",key_list[j],"' width='256' height='192' title='",H0,"' > </div>");
+        var H4 = "<p> image names: <select>";
+        for (var k=1;k<img_list[j].length;k++){
+            if (key_list[j]==img_list[j][k]){
+                H4 = H4.concat("<option value='",String(k),"' selected='selected'>",img_list[j][k].split('/')[2],"</option>");
+            }
+            else{
+                H4 = H4.concat("<option value='",String(k),"'>",img_list[j][k].split('/')[2],"</option>");
+            }
+        }
+        H4 = H4.concat("</select><br>");
+        H4 = H4.concat("location: ",extra_info[j]['small_location'],'<br>');
+        if (extra_info[j]['activity']!='NULL'){
+            H4 = H4.concat("activity: ",extra_info[j]['activity'],"<br>");
+        }
+        H4 = H4.concat("</p>");
+        var td1 = document.createElement('td');
+        var td2 = document.createElement('td');
+        td1.innerHTML = H1
+        td2.innerHTML = H4//.concat(H2,H3);
+        if(j%4==0){
+            tr1 = document.createElement("tr");
+            tr2 = document.createElement("tr");
+        }
+        tr1.appendChild(td1);
+        tr2.appendChild(td2);
+        if(j%4==3 || j==key_list.length-1){
+            editimgTable.appendChild(tr1);
+            editimgTable.appendChild(tr2);
+        }
+    }
+</script>
+{% endblock %}

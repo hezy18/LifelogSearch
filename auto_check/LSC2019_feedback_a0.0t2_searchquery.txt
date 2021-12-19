@@ -1,0 +1,2 @@
+LSC25
+query0	(tags:flowers OR tags:"old clock" OR tags:clock)

@@ -1,0 +1,168 @@
+LSC25
+query0	(tags:flowers OR tags:clock OR tags:"old clock")
+query1	(tags:flowers OR tags:clock OR tags:lamp OR tags:"old clock")
+query2	(tags:flowers OR tags:clock OR tags:lamp OR tags:"old clock")
+query3	(tags:flowers OR tags:clock OR tags:lamp OR tags:"old clock")
+query4	((loc_weekday:Monday OR loc_weekday:Thursday) AND (tags:flowers OR tags:clock OR tags:lamp OR tags:"old clock"))
+query5	((loc_weekday:Monday OR loc_weekday:Thursday) AND (location:home OR location:bedroom) AND (tags:flowers OR tags:clock OR tags:lamp OR tags:bedroom OR tags:"old clock"))
+LSC26
+query0	(tags:car OR tags:house OR tags:"white house" OR tags:"red car")
+query1	(tags:"red car" OR tags:car OR tags:"white house" OR tags:day OR tags:house OR tags:"cloudy day")
+query2	(past_location:transportation AND past_activity:transport AND (tags:"red car" OR tags:car OR tags:"white house" OR tags:day OR tags:house OR tags:"cloudy day"))
+query3	(loc_weekday:Saturday AND past_location:transportation AND past_activity:transport AND (tags:"red car" OR tags:car OR tags:"white house" OR tags:day OR tags:house OR tags:"cloudy day"))
+query4	(loc_month:8 AND loc_weekday:Saturday AND past_location:transportation AND past_activity:transport AND (tags:"red car" OR tags:car OR tags:"white house" OR tags:day OR tags:house OR tags:"cloudy day"))
+query5	(loc_hour_start:[12 TO 15] AND loc_hour_end:[12 TO 15] AND loc_month:8 AND loc_weekday:Saturday AND past_location:transportation AND past_activity:transport AND (tags:"red car" OR tags:car OR tags:"white house" OR tags:day OR tags:house OR tags:"cloudy day"))
+LSC27
+query0	(location:transportation AND (activity:airplane OR activity:walking OR activity:transport))
+query1	(loc_hour_start:[4 TO 9] AND loc_hour_end:[4 TO 9] AND location:transportation AND (activity:airplane OR activity:walking OR activity:transport))
+query2	(loc_hour_start:[4 TO 9] AND loc_hour_end:[4 TO 9] AND location:transportation AND (activity:airplane OR activity:walking OR activity:transport))
+query3	(loc_hour_start:[4 TO 9] AND loc_hour_end:[4 TO 9] AND location:transportation AND future_location:airport AND (activity:airplane OR activity:walking OR activity:transport) AND future_activity:transport AND future_tags:airport)
+query4	(loc_hour_start:[4 TO 9] AND loc_hour_end:[4 TO 9] AND loc_weekday:Monday AND location:transportation AND future_location:airport AND (activity:airplane OR activity:walking OR activity:transport) AND future_activity:transport AND (tags:day OR tags:"cloudy day") AND future_tags:airport)
+query5	(loc_hour_start:[4 TO 9] AND loc_hour_end:[4 TO 9] AND loc_weekday:Monday AND (location:transportation OR location:norway) AND future_location:airport AND (activity:airplane OR activity:walking OR activity:transport) AND future_activity:transport AND (tags:day OR tags:"cloudy day") AND future_tags:airport)
+LSC28
+query0	(tags:"doll house" OR tags:"’ house" OR tags:"’ and doll and s house" OR tags:house OR tags:"s house")
+query1	(tags:"dolls and white house" OR tags:"’ and doll and s house" OR tags:house OR tags:"white house" OR tags:"dolls house")
+query2	(tags:people OR tags:"’ and doll and s house" OR tags:"dolls and white house" OR tags:"white house" OR tags:"other people" OR tags:house OR tags:"dolls house")
+query3	(tags:people OR tags:"’ and doll and s house" OR tags:candles OR tags:"dolls and white house" OR tags:"white house" OR tags:candle OR tags:"other people" OR tags:house OR tags:"dolls house")
+query4	(tags:house OR tags:"dolls house" OR tags:people OR tags:"’ and doll and s house" OR tags:candles OR tags:front OR tags:"nice scene" OR tags:"dolls and white house" OR tags:"white house" OR tags:picture OR tags:scene OR tags:"village scene" OR tags:"other people" OR tags:candle OR tags:"nice and village scene")
+query5	(loc_weekday:Saturday AND (tags:house OR tags:"dolls house" OR tags:people OR tags:"’ and doll and s house" OR tags:candles OR tags:front OR tags:"nice scene" OR tags:"dolls and white house" OR tags:"white house" OR tags:picture OR tags:scene OR tags:"village scene" OR tags:"other people" OR tags:candle OR tags:"nice and village scene"))
+LSC29
+query0	(loc_hour_start:[4 TO 12] AND loc_hour_end:[4 TO 12] AND loc_weekday:Saturday AND location:bathroom AND (tags:"bathroom mirror" OR tags:reflection OR tags:mirror))
+query1	(loc_hour_start:[4 TO 12] AND loc_hour_end:[4 TO 12] AND loc_weekday:Saturday AND location:bathroom AND (tags:"bathroom mirror" OR tags:reflection OR tags:mirror))
+query2	(loc_hour_start:[4 TO 12] AND loc_hour_end:[4 TO 12] AND loc_weekday:Saturday AND location:bathroom AND (tags:reflection OR tags:tiles OR tags:mirror OR tags:"wall tiles" OR tags:tile OR tags:"bathroom mirror" OR tags:"wall tile"))
+query3	(loc_hour_start:[4 TO 12] AND loc_hour_end:[4 TO 12] AND loc_weekday:Saturday AND location:bathroom AND (tags:reflection OR tags:tiles OR tags:mirror OR tags:shirt OR tags:"wall tiles" OR tags:tile OR tags:"white shirt" OR tags:"bathroom mirror" OR tags:"wall tile"))
+query4	(loc_hour_start:[4 TO 12] AND loc_hour_end:[4 TO 12] AND loc_weekday:Saturday AND location:bathroom AND (tags:reflection OR tags:tiles OR tags:mirror OR tags:shirt OR tags:"wall tiles" OR tags:tile OR tags:"white shirt" OR tags:"bathroom mirror" OR tags:"wall tile") AND past_tags:tv)
+query5	(loc_hour_start:[4 TO 12] AND loc_hour_end:[4 TO 12] AND loc_weekday:Saturday AND location:bathroom AND (tags:reflection OR tags:tiles OR tags:mirror OR tags:shirt OR tags:"wall tiles" OR tags:tile OR tags:"white shirt" OR tags:"bathroom mirror" OR tags:"wall tile") AND past_tags:tv)
+LSC30
+query0	tags:grass
+query1	tags:grass
+query2	(tags:grass OR tags:day OR tags:"cloudy day")
+query3	(tags:tree OR tags:grass OR tags:day OR tags:"cloudy day" OR tags:trees)
+query4	(tags:tree OR tags:grass OR tags:"more trees" OR tags:"more tree" OR tags:day OR tags:trees OR tags:"cloudy day")
+query5	(loc_hour_start:[12 TO 19] AND loc_hour_end:[12 TO 19] AND loc_weekday:Saturday AND (tags:tree OR tags:grass OR tags:"more trees" OR tags:"more tree" OR tags:day OR tags:trees OR tags:"cloudy day"))
+LSC31
+query0	(tags:salad OR tags:bread)
+query1	(tags:computer OR tags:salad OR tags:bread)
+query2	(loc_hour_start:[10 TO 14] AND loc_hour_end:[10 TO 14] AND (tags:computer OR tags:salad OR tags:bread))
+query3	(loc_hour_start:[10 TO 14] AND loc_hour_end:[10 TO 14] AND (tags:computer OR tags:"blue sweater" OR tags:salad OR tags:bread OR tags:sweater))
+query4	(loc_hour_start:[10 TO 14] AND loc_hour_end:[10 TO 14] AND (tags:bread OR tags:sweater OR tags:salad OR tags:table OR tags:computer OR tags:"blue sweater" OR tags:phones OR tags:phone))
+query5	(loc_hour_start:[10 TO 14] AND loc_hour_end:[10 TO 14] AND (tags:bread OR tags:sweater OR tags:salad OR tags:table OR tags:computer OR tags:"blue sweater" OR tags:phones OR tags:phone) AND (future_tags:"i coffee" OR future_tags:coffee))
+LSC32
+query0	activity:walking
+query1	(activity:walking AND tags:car)
+query2	(past_location:transportation AND activity:walking AND (past_activity:airplane OR past_activity:transport) AND tags:car)
+query3	(loc_hour_start:[10 TO 14] AND loc_hour_end:[10 TO 14] AND past_location:transportation AND activity:walking AND (past_activity:airplane OR past_activity:transport) AND tags:car)
+query4	(loc_hour_start:[10 TO 14] AND loc_hour_end:[10 TO 14] AND future_location:transportation AND past_location:transportation AND activity:walking AND future_activity:transport AND (past_activity:airplane OR past_activity:transport) AND tags:car AND future_tags:car)
+query5	(loc_hour_start:[10 TO 14] AND loc_hour_end:[10 TO 14] AND (future_location:work OR future_location:transportation) AND past_location:transportation AND activity:walking AND future_activity:transport AND (past_activity:airplane OR past_activity:transport) AND tags:car AND future_tags:car)
+LSC33
+query0	(tags:clothes OR tags:cloth)
+query1	(loc_hour_start:[17 TO 21] AND loc_hour_end:[17 TO 21] AND (tags:clothes OR tags:cloth))
+query2	(loc_hour_start:[17 TO 21] AND loc_hour_end:[17 TO 21] AND location:hotel AND (tags:clothes OR tags:"hotel room" OR tags:room OR tags:cloth))
+query3	(loc_hour_start:[17 TO 21] AND loc_hour_end:[17 TO 21] AND location:hotel AND (tags:room OR tags:floor OR tags:"brown floor" OR tags:clothes OR tags:"hotel room" OR tags:cloth))
+query4	(loc_hour_start:[17 TO 21] AND loc_hour_end:[17 TO 21] AND location:hotel AND (tags:room OR tags:floor OR tags:"brown floor" OR tags:clothes OR tags:kettle OR tags:"hotel room" OR tags:cloth))
+query5	(loc_hour_start:[17 TO 21] AND loc_hour_end:[17 TO 21] AND location:hotel AND (tags:room OR tags:floor OR tags:"brown floor" OR tags:clothes OR tags:kettle OR tags:"hotel room" OR tags:cloth))
+LSC34
+query0	(tags:"important game" OR tags:"football game" OR tags:game OR tags:"important and football game")
+query1	(tags:game OR tags:"important and football game" OR tags:"football game" OR tags:computer OR tags:"important game" OR tags:"tablet computer")
+query2	((tags:game OR tags:"important and football game" OR tags:"football game" OR tags:computer OR tags:"important game" OR tags:"tablet computer") AND past_tags:beer)
+query3	((tags:game OR tags:"important and football game" OR tags:"football game" OR tags:bed OR tags:computer OR tags:"important game" OR tags:"tablet computer") AND (past_tags:beer OR past_tags:table))
+query4	(location:hotel AND (tags:room OR tags:game OR tags:"important and football game" OR tags:football OR tags:"football game" OR tags:bed OR tags:computer OR tags:"important game" OR tags:"hotel room" OR tags:"tablet computer") AND (past_tags:beer OR past_tags:table))
+query5	(location:hotel AND (tags:room OR tags:game OR tags:"important and football game" OR tags:"tv in room" OR tags:football OR tags:tv OR tags:"football game" OR tags:bed OR tags:computer OR tags:"important game" OR tags:"hotel room" OR tags:"tablet computer") AND (past_tags:beer OR past_tags:table))
+LSC35
+query0	(loc_hour_start:[4 TO 9] AND loc_hour_end:[4 TO 9] AND location:shop AND (tags:clothes OR tags:cloth))
+query1	(loc_hour_start:[4 TO 9] AND loc_hour_end:[4 TO 9] AND (location:ireland OR location:shop) AND (tags:clothes OR tags:cloth))
+query2	(loc_hour_start:[4 TO 9] AND loc_hour_end:[4 TO 9] AND (location:shop OR location:ireland) AND (tags:shirt OR tags:clothes OR tags:belt OR tags:cloth))
+query3	(loc_hour_start:[4 TO 9] AND loc_hour_end:[4 TO 9] AND (location:ireland OR location:shop) AND (tags:shirt OR tags:clothes OR tags:belt OR tags:cloth))
+query4	(loc_hour_start:[4 TO 9] AND loc_hour_end:[4 TO 9] AND (location:shop OR location:ireland) AND (tags:shirt OR tags:clothes OR tags:belt OR tags:cloth))
+query5	(loc_hour_start:[4 TO 9] AND loc_hour_end:[4 TO 9] AND loc_weekday:Saturday AND (location:ireland OR location:shop) AND (tags:shirt OR tags:clothes OR tags:belt OR tags:cloth))
+LSC36
+query0	(loc_hour_start:[4 TO 12] AND loc_hour_end:[4 TO 12] AND tags:coffee)
+query1	(loc_hour_start:[4 TO 12] AND loc_hour_end:[4 TO 12] AND (tags:person OR tags:someone OR tags:coffee OR tags:people))
+query2	(loc_hour_start:[4 TO 12] AND loc_hour_end:[4 TO 12] AND (tags:person OR tags:someone OR tags:coffee OR tags:people OR tags:"few people"))
+query3	(loc_hour_start:[4 TO 12] AND loc_hour_end:[4 TO 12] AND (tags:"yellow doors" OR tags:door OR tags:person OR tags:people OR tags:"few people" OR tags:coffee OR tags:someone OR tags:"yellow door" OR tags:doors))
+query4	(loc_hour_start:[4 TO 12] AND loc_hour_end:[4 TO 12] AND future_location:work AND (tags:"yellow doors" OR tags:door OR tags:person OR tags:people OR tags:"few people" OR tags:coffee OR tags:someone OR tags:"yellow door" OR tags:doors))
+query5	(loc_hour_start:[4 TO 12] AND loc_hour_end:[4 TO 12] AND loc_weekday:Monday AND location:norway AND future_location:work AND (tags:"yellow doors" OR tags:door OR tags:person OR tags:people OR tags:"few people" OR tags:coffee OR tags:someone OR tags:"yellow door" OR tags:doors))
+LSC37
+query0	(tags:clothes OR tags:cloth)
+query1	(tags:"white shirts" OR tags:shirts OR tags:shirt OR tags:clothes OR tags:"white shirt" OR tags:cloth)
+query2	(tags:"white shirts" OR tags:shirts OR tags:shirt OR tags:clothes OR tags:"white shirt" OR tags:cloth)
+query3	(location:home AND (tags:"white shirts" OR tags:shirts OR tags:shirt OR tags:clothes OR tags:"white shirt" OR tags:cloth))
+query4	(location:home AND (tags:"white shirts" OR tags:shirts OR tags:shirt OR tags:clothes OR tags:"white shirt" OR tags:cloth) AND (past_tags:light OR past_tags:lights OR past_tags:"red lights" OR past_tags:"red light"))
+query5	(loc_weekday:Saturday AND location:home AND (tags:"white shirts" OR tags:shirts OR tags:shirt OR tags:clothes OR tags:"white shirt" OR tags:cloth) AND (past_tags:light OR past_tags:lights OR past_tags:"red lights" OR past_tags:"red light"))
+LSC38
+query0	(location:office AND past_location:helix AND tags:office)
+query1	(loc_hour_start:[4 TO 12] AND loc_hour_end:[4 TO 12] AND loc_weekday:Friday AND location:office AND past_location:helix AND tags:office)
+query2	(loc_hour_start:[4 TO 12] AND loc_hour_end:[4 TO 12] AND loc_weekday:Friday AND location:office AND past_location:helix AND (tags:laptop OR tags:"green background" OR tags:"bright background" OR tags:background OR tags:"bright and green background" OR tags:office))
+query3	(loc_hour_start:[4 TO 12] AND loc_hour_end:[4 TO 12] AND loc_weekday:Friday AND location:office AND past_location:helix AND (tags:face OR tags:screen OR tags:laptop OR tags:"green background" OR tags:"bright background" OR tags:background OR tags:"bright and green background" OR tags:office OR tags:man))
+query4	(loc_hour_start:[4 TO 12] AND loc_hour_end:[4 TO 12] AND loc_weekday:Friday AND location:office AND past_location:helix AND (tags:face OR tags:screen OR tags:laptop OR tags:desk OR tags:"green background" OR tags:"bright background" OR tags:background OR tags:"bright and green background" OR tags:office OR tags:man) AND past_tags:coffee)
+query5	(loc_hour_start:[4 TO 12] AND loc_hour_end:[4 TO 12] AND loc_weekday:Friday AND location:office AND past_location:helix AND (tags:face OR tags:screen OR tags:laptop OR tags:desk OR tags:"green background" OR tags:"bright background" OR tags:background OR tags:"bright and green background" OR tags:office OR tags:man) AND past_tags:coffee)
+LSC39
+query0	(tags:auditorium OR tags:people OR tags:"crowded auditorium")
+query1	(tags:auditorium OR tags:people OR tags:"crowded auditorium")
+query2	(tags:auditorium OR tags:people OR tags:"crowded auditorium")
+query3	(tags:auditorium OR tags:room OR tags:people OR tags:"crowded auditorium" OR tags:"back of room" OR tags:back)
+query4	(future_activity:walking AND (tags:auditorium OR tags:room OR tags:people OR tags:"crowded auditorium" OR tags:"back of room" OR tags:back))
+query5	(loc_hour_start:[17 TO 21] AND loc_hour_end:[17 TO 21] AND loc_weekday:Thursday AND future_activity:walking AND past_activity:walking AND (tags:auditorium OR tags:room OR tags:people OR tags:"crowded auditorium" OR tags:"back of room" OR tags:back))
+LSC40
+query0	<_NullQuery>
+query1	tags:tv
+query2	(location:home AND tags:tv)
+query3	(location:home AND (tags:"other people" OR tags:people OR tags:tv))
+query4	(loc_weekday:Saturday AND location:home AND (tags:"other people" OR tags:people OR tags:tv))
+query5	(loc_weekday:Saturday AND location:home AND future_location:shop AND (tags:"other people" OR tags:people OR tags:tv))
+LSC41
+query0	(tags:"unix book" OR tags:book)
+query1	(tags:"unix book" OR tags:books OR tags:book)
+query2	(tags:"unix book" OR tags:"big book" OR tags:books OR tags:book)
+query3	(tags:"orange book" OR tags:"unix book" OR tags:"big book" OR tags:books OR tags:book)
+query4	(location:office AND (tags:"orange book" OR tags:"big book" OR tags:books OR tags:book OR tags:"unix book" OR tags:office))
+query5	(loc_hour_start:[17 TO 21] AND loc_hour_end:[17 TO 21] AND location:office AND (tags:"orange book" OR tags:"big book" OR tags:books OR tags:book OR tags:"unix book" OR tags:office))
+LSC42
+query0	<_NullQuery>
+query1	<_NullQuery>
+query2	<_NullQuery>
+query3	<_NullQuery>
+query4	<_NullQuery>
+query5	(future_location:home AND (future_tags:"window in front" OR future_tags:front OR future_tags:tv OR future_tags:window))
+LSC43
+query0	(tags:"word game" OR tags:game)
+query1	(tags:door OR tags:"refrigerator door" OR tags:"word game" OR tags:game)
+query2	(location:kitchen AND (tags:door OR tags:kitchen OR tags:"refrigerator door" OR tags:"word game" OR tags:game))
+query3	(location:kitchen AND (tags:door OR tags:kitchen OR tags:"refrigerator door" OR tags:"word game" OR tags:game))
+query4	(location:kitchen AND (tags:door OR tags:"word game" OR tags:game OR tags:"green top" OR tags:"white and green top" OR tags:"white top" OR tags:girl OR tags:kitchen OR tags:"refrigerator door" OR tags:top))
+query5	(location:kitchen AND (tags:door OR tags:"word game" OR tags:game OR tags:"green top" OR tags:"white and green top" OR tags:"white top" OR tags:girl OR tags:kitchen OR tags:"refrigerator door" OR tags:top))
+LSC44
+query0	location:bank
+query1	location:bank
+query2	location:bank
+query3	(location:bank AND (tags:"blue and big chair" OR tags:"big chair" OR tags:"blue chair" OR tags:chair))
+query4	(location:bank AND tags:"blue and big chair" AND (future_tags:"blue and big chair" OR future_tags:"big chair" OR future_tags:"blue chair" OR future_tags:chair))
+query5	(location:bank AND future_location:office AND tags:"blue and big chair" AND (future_tags:"blue and big chair" OR future_tags:"blue chair" OR future_tags:"big chair" OR future_tags:office OR future_tags:chair))
+LSC45
+query0	(tags:"childrens horse" OR tags:horse)
+query1	(tags:"childrens horse" OR tags:horse OR tags:"white horse")
+query2	(tags:clock OR tags:"childrens horse" OR tags:horse OR tags:"white horse")
+query3	(tags:clock OR tags:"childrens horse" OR tags:floor OR tags:horse OR tags:"black floor" OR tags:"white horse")
+query4	(tags:clock OR tags:"chair in room" OR tags:"childrens horse" OR tags:room OR tags:floor OR tags:table OR tags:horse OR tags:chair OR tags:"black floor" OR tags:"white horse")
+query5	(tags:clock OR tags:"chair in room" OR tags:"childrens horse" OR tags:room OR tags:floor OR tags:table OR tags:horse OR tags:chair OR tags:"black floor" OR tags:"white horse")
+LSC46
+query0	(loc_hour_start:[3 TO 6] AND loc_hour_end:[3 TO 6] AND location:hotel AND tags:hotel)
+query1	(loc_hour_start:[3 TO 6] AND loc_hour_end:[3 TO 6] AND location:hotel AND (tags:screens OR tags:side OR tags:"right side" OR tags:screen OR tags:hotel))
+query2	(loc_hour_start:[3 TO 6] AND loc_hour_end:[3 TO 6] AND location:hotel AND future_location:transportation AND (future_activity:airplane OR future_activity:transport) AND (tags:screens OR tags:side OR tags:"right side" OR tags:screen OR tags:hotel))
+query3	(loc_hour_start:[3 TO 6] AND loc_hour_end:[3 TO 6] AND location:hotel AND (future_location:airport OR future_location:transportation) AND (future_activity:airplane OR future_activity:transport OR future_activity:walking) AND (tags:screens OR tags:side OR tags:"right side" OR tags:screen OR tags:hotel) AND (future_tags:airport OR future_tags:"i and short distance" OR future_tags:"i distance" OR future_tags:distance OR future_tags:"short distance"))
+query4	(loc_hour_start:[3 TO 6] AND loc_hour_end:[3 TO 6] AND location:hotel AND (future_location:airport OR future_location:transportation) AND past_location:airport AND (future_activity:airplane OR future_activity:transport OR future_activity:walking) AND past_activity:walking AND (tags:screens OR tags:side OR tags:"right side" OR tags:screen OR tags:hotel) AND (future_tags:airport OR future_tags:"i and short distance") AND (past_tags:airport OR past_tags:distance OR past_tags:"beautiful day" OR past_tags:day OR past_tags:"short distance"))
+query5	(loc_hour_start:[3 TO 6] AND loc_hour_end:[3 TO 6] AND (location:hotel OR location:norway) AND (future_location:airport OR future_location:transportation) AND past_location:airport AND (future_activity:airplane OR future_activity:transport OR future_activity:walking) AND past_activity:walking AND (tags:screens OR tags:side OR tags:"right side" OR tags:screen OR tags:hotel) AND (future_tags:airport OR future_tags:"i and short distance") AND (past_tags:airport OR past_tags:distance OR past_tags:"beautiful day" OR past_tags:day OR past_tags:"short distance"))
+LSC47
+query0	(loc_hour_start:[17 TO 21] AND loc_hour_end:[17 TO 21] AND tags:painting)
+query1	(loc_hour_start:[17 TO 21] AND loc_hour_end:[17 TO 21] AND loc_weekday:Friday AND location:kitchen AND (tags:kitchen OR tags:painting))
+query2	(loc_hour_start:[17 TO 21] AND loc_hour_end:[17 TO 21] AND loc_weekday:Friday AND location:kitchen AND (tags:wall OR tags:kitchen OR tags:painting))
+query3	(loc_hour_start:[17 TO 21] AND loc_hour_end:[17 TO 21] AND loc_weekday:Friday AND location:kitchen AND (tags:"brown colour" OR tags:kitchen OR tags:"light colour" OR tags:colour OR tags:painting OR tags:"brown and light colour" OR tags:wall))
+query4	(loc_hour_start:[17 TO 21] AND loc_hour_end:[17 TO 21] AND loc_weekday:Friday AND location:kitchen AND (tags:"brown colour" OR tags:kitchen OR tags:"small pot" OR tags:paint OR tags:"light colour" OR tags:painting OR tags:"brown and light colour" OR tags:colour OR tags:pot OR tags:"colour and test paint" OR tags:wall OR tags:"test paint" OR tags:"colour paint"))
+query5	(loc_hour_start:[17 TO 21] AND loc_hour_end:[17 TO 21] AND loc_weekday:Friday AND location:kitchen AND (tags:"brown colour" OR tags:kitchen OR tags:"small pot" OR tags:paint OR tags:"light colour" OR tags:painting OR tags:"brown and light colour" OR tags:colour OR tags:pot OR tags:"colour and test paint" OR tags:wall OR tags:"test paint" OR tags:"colour paint") AND future_tags:bed)
+LSC48
+query0	(tags:"black cup" OR tags:"large and black cup" OR tags:cup OR tags:tea OR tags:"large cup")
+query1	(tags:"large cup" OR tags:tea OR tags:people OR tags:"large and black cup" OR tags:cup OR tags:"other people" OR tags:"black cup")
+query2	(tags:"large cup" OR tags:tea OR tags:people OR tags:table OR tags:"large and black cup" OR tags:cup OR tags:"other people" OR tags:"black cup")
+query3	(tags:"large cup" OR tags:tea OR tags:people OR tags:table OR tags:"large and black cup" OR tags:cup OR tags:"other people" OR tags:"black cup")
+query4	(tags:"large cup" OR tags:tea OR tags:people OR tags:table OR tags:"large and black cup" OR tags:cup OR tags:"other people" OR tags:"black cup")
+query5	(loc_weekday:Saturday AND (tags:"large cup" OR tags:tea OR tags:people OR tags:table OR tags:"large and black cup" OR tags:cup OR tags:"other people" OR tags:"black cup"))

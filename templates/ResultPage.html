@@ -1,0 +1,573 @@
+{% extends "Title.html" %}
+{% block head %} 
+    <title>RESULT | LIFE RECORD</title>
+    <link rel="stylesheet" href="/static/js/jRange-master/jquery.range.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="/static/js/jRange-master/jquery.range.js"></script>
+    <script src="/static/js/jRange-master/jquery.range-min.js"></script>
+    <style>
+        #search{
+            position: absolute;
+            top:110px;width:27%;left:6%;
+            border-right: 3px solid azure;
+            border-left: 3px solid azure;
+        }
+        .part{
+            position: relative;
+            width: 100%;
+        }
+        #images{
+            position: absolute;
+            top:110px; left:34%;width: 65%;
+        }
+        .title{
+            color:#1e90ff;
+            font-size: 20px; font-weight: bolder; text-align: center;
+        }
+        .part{
+            padding-bottom: 3px;
+            padding-top: 3px;
+            border-bottom: 1px solid #7bed9f ;
+        }
+        .content >div{
+            text-align: center;
+        }
+        .subtitle{
+            margin-left: 10px;
+            text-align: left;
+            font-size: 16px;font-weight: bold; 
+        }
+        #time table{
+            border-collapse: separate; border-spacing:8px 8px; 
+        }
+        #basic_list input{display: none;}
+        #basic_list input:checked+p{background-color:cyan;}
+        #basic_list td{width:40px; border: 2px solid black;text-align: center;}
+        #basic_list li table{display:inline}
+        #search_button {height: 30px;position: fixed;left:30%;top:90%;}
+        #tags table{
+            margin-left: 40px;
+        } 
+        #tags .tag_add{
+            text-align: left;
+            margin-left: 50px;
+        }
+        .tagtitle{
+            text-align: left;
+            margin-left: 20px;
+        }
+        .detailtitle{
+            text-align: left; margin-left: 10px;
+            font-size: 16px ; font-weight: bold;
+        }
+        #content3 table{
+            margin-left: 40px;
+        }
+        textarea{
+            font-size: 16px;
+        }
+        #images_show input{display: none;}
+        /* #images_show p{border: 1px solid black;} */
+        #images_show div{margin:2px;}
+        #images_show input:checked+p{background-color:cyan;}
+        #selectAll{display: none;}
+        .selectAll_div p{font-size: 18px; width:290px;}
+        #selectAll:checked+p{background-color:cyan;}
+        input:checked+div{background-color:cyan;}
+        .selectAll_div{font-size: 18px;border: 1px solid black;border-radius:25px;width: 300px;height:25px; display:flex; justify-content: center;}
+    
+        #part4 textarea{font-size:12px;}
+    </style>
+    <script>
+        $(document).ready(function(){
+        $('.time_slide').jRange({
+            from: 0,
+            to: 24,
+            step: 1,
+            scale: [0,6,12,18,24],
+            format: '%s',
+            width: 150,
+            showLabels: true,
+            isRange : true
+        });
+    });
+    </script>
+{% endblock %}
+
+{% block body %}
+<form action="/result/" method="POST" id="F">
+    <div id='search'>
+        <div class='part' id='part0'>
+            <!-- <div class='title' id='title0'>文本查询输入</div> -->
+            <div class='title' id='title0'>Text Input</div>
+            <div class="content" id='content0'>
+                <div id='text_input'>
+                    <textarea name="text_input" id="text" cols="60" rows="8"></textarea>
+                </div>
+                <div>
+                    <!-- <input name="form_fill" type="submit" class="myButton" value="解析查询文本"> -->
+                    <input name="form_fill" type="submit" class="myButton" value="Fill in Forms">
+                </div>
+            </div>
+        </div>
+        <div class='part' id='part1'>
+            <!-- <div class='title' id='title1'>视觉特征</div> -->
+            <div class='title' id='title1'>Basic Information</div>
+            <div class='content' id='content1'>
+                <div id='color'>
+                    <!-- <div class='subtitle' id='color_text'><img src="/static/icons/list_1.png" width="16px" alt=""> 图片主要颜色:</div> -->
+                    <div class='subtitle' id='color_text'><img src="/static/icons/list_1.png" width="16px" alt=""> Color of the image:</div>
+                    <ul id='color_list'>
+                        <li><input type="color" name='color1' id='color1' value='#c0c0c0'><input type="color" name='color2' id='color2' value='#c0c0c0'><input type="color" name='color3' id='color3' value='#c0c0c0'></li>
+                        <li><input type="color" name='color4' id='color4' value='#c0c0c0'><input type="color" name='color5' id='color5' value='#c0c0c0'><input type="color" name='color6' id='color6' value='#c0c0c0'></li>
+                        <li><input type="color" name='color7' id='color7' value='#c0c0c0'><input type="color" name='color8' id='color8' value='#c0c0c0'><input type="color" name='color9' id='color9' value='#c0c0c0'></li>
+                    </ul>
+                </div>
+                <div id='basic_info'>
+                    <!-- <div class="subtitle"><img src="/static/icons/list_1.png" width="16px" alt="">图片基本参数:</div> -->
+                    <div class="subtitle"><img src="/static/icons/list_1.png" width="16px" alt="">Image basic parameters:</div>
+                    <ul id='basic_list'>
+                        <li> <p>brightness:</p>
+                            <table>
+                                <tr>
+                                    <td><input type="radio" name="brightness" id="none_bri" value="none" checked="checked"><p><label for="none_bri">none</label></p></td>
+                                    <td><input type="radio" name="brightness" id="low_bri" value="low"><p><label for="low_bri">low</label></p></td>
+                                    <td><input type="radio" name="brightness" id="medium_bri" value="medium"><p><label for="medium_bri">medium</label></p></td>
+                                    <td><input type="radio" name="brightness" id="high_bri" value="high"><p><label for="high_bri">high</label></p></td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li> <div>contrast: </div>
+                            <table>
+                                <tr>
+                                    <td><input type="radio" name="contrast" id="none_con" value="none" checked="checked"><p><label for="none_con">none</label></p></td>
+                                    <td><input type="radio" name="contrast" id="low_con" value="low"><p><label for="low_con">low</label></p></td>
+                                    <td><input type="radio" name="contrast" id="medium_con" value="medium"><p><label for="medium_con">medium</label></p></td>
+                                    <td><input type="radio" name="contrast" id="high_con" value="high"><p><label for="high_con">high</label></p></td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li> <div>saturation: </div> 
+                            <table>
+                                <tr>
+                                    <td><input type="radio" name="saturation" id="none_sat" value="none" checked="checked"><p><label for="none_sat">none</label></p></td>
+                                    <td><input type="radio" name="saturation" id="low_sat" value="low" ><p><label for="low_sat">low</label></p></td>
+                                    <td><input type="radio" name="saturation" id="medium_sat" value="medium" ><p><label for="medium_sat">medium</label></p></td>
+                                    <td><input type="radio" name="saturation" id="high_sat" value="high" ><p><label for="high_sat">high</label></p></td>
+                                </tr>
+                            </table>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class='part' id='part2'>
+            <!-- <div class='title' id='title2'>文本特征</div> -->
+            <div class='title' id='title2'>Detail Description</div>
+            <div class='content' id='content2'>
+                <div class='detailcontent' id='time'>
+                    <!-- <div class='subtitle' id='time_title'><img src="/static/icons/list_1.png" width="16px" alt="">时间</div> -->
+                    <div class='subtitle' id='time_title'><img src="/static/icons/list_1.png" width="16px" alt="">Time</div>
+                    <table id='local_time'>
+                        <!-- <tr align="center">
+                            <td colspan="2">Local Time</td>
+                        </tr> -->
+                        <tr>
+                            <td>Date: </td><td><input id='loc_date' type="text" size="10px" name="loc_date"></td>
+                        </tr>
+                        <tr>
+                            <td>Weekday: </td><td><input id='loc_weekday' type="text" size="10px" name='loc_weekday'></td>
+                        </tr>
+                        <tr>
+                            <td>Approximate time: </td>
+                            <td><select name="loc_time" id="loc_time">
+                                <option value="null"></option>
+                                <option value="early morning">early morning</option>
+                                <option value="morning">morning</option>
+                                <option value="noon">noon</option>
+                                <option value="early afternoon">early afternoon</option>
+                                <option value="afternoon">afternoon</option>
+                                <option value="evening">evening</option>
+                                <option value="night">night</option>
+                                <option value="late night">late night</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td>Range of hour: </td>
+                            <td><input type="hidden" class="time_slide" value="24" name="loc_timer"/></td>
+                        </tr>
+                        <tr align="center">
+                        </tr>
+                    </table>
+                </div>
+                <div class='detailcontent' id='tags'>
+                    <!-- <div class='subtitle' id='tag_title'><img src="/static/icons/list_1.png" width="16px" alt="">物体标签</div> -->
+                    <div class='subtitle' id='tag_title'><img src="/static/icons/list_1.png" width="16px" alt="">Objects</div>
+                    <ul>
+                        <li>
+                            <div class='tagtitle'>Objects in the scene:</div>
+                            <table id="this_tag">
+                                <tr>
+                                    <td><input type="text" id="this_tag0" name="this_tag0" size="20px"></td>
+                                    <td>
+                                        <input type="button" value="Delete" onclick="delRow()">
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class='tag_add'><input type="button" value="Add" onclick="createRow('this_tag')"></div>
+                        </li>
+                        <li>
+                            <div class='tagtitle'> Objects seen in future 1 hour:</div>
+                            <table id="future_tag">
+                                <tr>
+                                    <td><input type="text" id="future_tag0" name="future_tag0" size="20px"></td>
+                                    <td>
+                                        <input type="button" value="Delete" onclick="delRow()">
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class='tag_add'><input type="button" value="Add" onclick="createRow('future_tag')"></div>
+                        </li>
+                        <li>
+                            <div class='tagtitle'> Objects seen in past 1 hour: </div>
+                            <table id="past_tag">
+                                <tr>
+                                    <td><input type="text" id="past_tag0" name="past_tag0" size="20px"></td>
+                                    <td>
+                                        <input type="button" value="Delete" onclick="delRow()">
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class='tag_add'><input type="button" value="Add" onclick="createRow('past_tag')"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class='detailcontent' id='biology'>
+                    <div class='subtitle' id='bio_title'><img src="/static/icons/list_1.png" width="16px" alt="">Biometrics Logs </div>
+                    <table>
+                        <tr>
+                            <td>Total Elevation is</td>
+                            <td><select name="elevation_range" id="elevation_range">
+                                <option value="above">above</option>
+                                <option value="under">under</option>
+                                <option value="between">between</option>
+                            </select></td>
+                            <td><input type="text" size="10px" name="elevation"></td>
+                        </tr>
+                        <tr>
+                            <td>Total calorie is</td>
+                            <td><select name="calories_range" id="calories_range">
+                                <option value="above">above</option>
+                                <option value="under">under</option>
+                                <option value="between">between</option>
+                            </select></td>
+                            <td><input type="text" size="10px" name="calories"></td>
+                        </tr>
+                        <tr>
+                            <td>Total Step is</td>
+                            <td><select name="steps_range" id="steps_range">
+                                <option value="above">above</option>
+                                <option value="under">under</option>
+                                <option value="between">between</option>
+                            </select></td>
+                            <td><input type="text" size="10px" name="steps"></td>
+                        </tr>
+                        <tr>
+                            <td>Average speed is</td>
+                            <td><select name="speed_range" id="speed_range">
+                                <option value="above">above</option>
+                                <option value="under">under</option>
+                                <option value="between">between</option>
+                            </select></td>
+                            <td><input type="text" size="10px" name="speed"></td>
+                        </tr>
+                        <tr>
+                            <td>Average heart rate  is</td>
+                            <td><select name="heart_range" id="heart_range">
+                                <option value="above">above</option>
+                                <option value="under">under</option>
+                                <option value="between">between</option>
+                            </select></td>
+                            <td><input type="text" size="10px" name="heart"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class='part' id='part3'>
+            <!-- <div class='title' id='title3'>语义特征</div> -->
+            <div class='title' id='title3'>Semantic Description</div>
+            <div class='content' id='content3'>
+                <div class="detailcontent" id='this_semantic'>
+                    <!-- <div class='detailtitle'><img src="/static/icons/list_1.png" width="16px" alt="">当前场景</div> -->
+                    <div class='detailtitle'><img src="/static/icons/list_1.png" width="16px" alt="">Description in this shot</div>
+                    <table>
+                        <tr>
+                            <td>Location:</td>
+                            <td>
+                                <input type="text" size="14px" id="this_location" name="this_location">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Activity:</td>
+                            <td>
+                                <input type="text" size="14px" id="this_activity" name="this_activity">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="detailcontent" id='future_semantic'>
+                    <!-- <div class='detailtitle'><img src="/static/icons/list_1.png" width="16px" alt="">未来一个小时</div> -->
+                    <div class='detailtitle'><img src="/static/icons/list_1.png" width="16px" alt="">Description for future 1 hour</div>
+                    <table>
+                        <tr>
+                            <td>Location:</td>
+                            <td>
+                                <input type="text" size="14px" id="future_location" name="future_location">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Activity:</td>
+                            <td>
+                                <input type="text" size="14px" id="future_activity" name="future_activity">
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+                <div class="detailcontent" id='past_semantic'>
+                    <!-- <div class='detailtitle'><img src="/static/icons/list_1.png" width="16px" alt="">过去一个小时</div> -->
+                    <div class='detailtitle'><img src="/static/icons/list_1.png" width="16px" alt="">Description for past 1 hour</div>
+                    <table>
+                        <tr>
+                            <td>Location:</td>
+                            <td>
+                                <input type="text" size="14px" id="past_location" name="past_location">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Activity:</td>
+                            <td>
+                                <input type="text" size="14px" id="past_activity" name="past_activity">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="part" id="part4">
+            <div class="title" id='title4'>Negative Feedback</div>
+            <div class="content" id="content4">
+                <div class="detailcontent" id='img_fb_block'>
+                    <div class='detailtitle'><img src="/static/icons/list_1.png" width="16px" alt=""> Image Feedback</div>
+                    <div> <textarea name="img_feedback" id="img_feedback" cols="44" rows="6"></textarea> </div>
+                </div>
+                <div class="detailcontent" id="tag_fb_block">
+                    <div class="detailtitle"><img src="/static/icons/list_1.png" width="16px" alt=""> Exclude Images with tag:</div>
+                    <div><textarea name="Tag_feedback" id="Tag_feedback" cols="44" rows="4"></textarea></div>
+                </div>
+            </div>
+        </div>
+        <div id='search_button'>
+            <input name="search" type="submit" class="myButton" value="Search">
+        </div>
+    </div>
+    <div id='images'>
+        <div id='submit'>
+            Result id: <textarea name="submit_id" id="submit_id" cols="20" rows="1"></textarea>
+            <input name="Submit" type="submit" class="myButton" value="Submit">
+            <p id='submit_p'>Submission system feedback:</p>
+        </div>
+        <ul id='image_list'>
+        </ul>
+        <table id='images_show'>
+            <!-- <p>
+                image names:
+                local time:
+                location:
+                activity:
+            </p> -->
+        </table>
+        <div id="c_center">
+        <input type="checkbox" id="selectAll" onclick="funcAll()">
+        <div id="selectAll_div" class="selectAll_div">
+            <label for="selectAll">Select all as irrelevant</label>
+        </div>
+        </div>
+    </div>
+</form>
+
+<script>
+    var all_data = {{ all_content|tojson}};
+    var form_data = all_data['js_query_term'];
+    var key_list = all_data['result_key'];
+    var img_list = all_data['result_all'];
+    var extra_info = all_data['extra_info'];
+    for (var key in form_data){
+        console.log(key);
+        if(key=='submit_result'){
+            inputDiv = document.getElementById("submit_p");
+            inputDiv.innerHTML = 'Submission system feedback: '+form_data[key];
+        }
+        var inputDiv = document.getElementById(key);
+        if(inputDiv==null){
+            inputDiv = document.getElementsByName(key);
+        }
+        if (key.lastIndexOf("tag") == -1){
+            // tag 以外的数据，直接填充到表格里
+            inputDiv.value = form_data[key];}
+        else{
+            // 首先删除原来的所有行
+            editTable = document.getElementById(key);
+            var rowscount = editTable.rows.length;
+            for(i=rowscount-1;i>=0;i--){
+                editTable.deleteRow(i);
+            }
+            for(var j=0; j<form_data[key].length;j++){
+                // 对每一个tag，得到对应table行的id
+                var inputName = key.concat(String(j));
+                createRow(key,form_data[key][j]);
+            }
+        }
+    }
+    var editkeyList = document.getElementById('image_list');
+    var editimgTable = document.getElementById('images_show');
+    // show key image list
+    // for (var j=0;j<key_list.length;j++){
+    //     var li = document.createElement("li");
+    //     var H = "<p>".concat(key_list[j],"</p>");
+    //     li.innerHTML=H;
+    //     editkeyList.appendChild(li);
+    // }
+    var Img_num = 5;  // 一行放多少个image
+    for (var j=0;j<key_list.length;j++){
+        // display the image list
+        var H0 = "";
+        if (extra_info[j]['speed']!='-1')
+            H0 = H0.concat("average speed: ",extra_info[j]['speed'],'\n');
+        if (extra_info[j]['calories']!='-1')
+            H0 = H0.concat("calories: ",extra_info[j]['calories'],'\n');
+        if (extra_info[j]['heart']!='-1')
+            H0 = H0.concat("average heart rate: ",extra_info[j]['heart'],'\n');
+        if (extra_info[j]['steps']!='-1')
+            H0 = H0.concat("total steps:",extra_info[j]['steps'],'\n');
+        if (extra_info[j]['tags']!='-1')
+            H0 = H0.concat("tags:",extra_info[j]['tags'],'\n');
+        var H1 = "<div> <img id ='img".concat(String(j)).concat("' src='/static/").concat(img_list[j][0],"' alt='",key_list[j],"' width='256' height='192' title='",H0,"' > </div>");
+        H1 = H1.concat("<div><p id='P",String(j),"'>","Image :",key_list[j],"</p></div>");
+        var H4 = ""
+        var H4 = "<p> image names: <select id='select".concat(String(j)).concat("' onChange='changeImage(\"select").concat(String(j)).concat("\")'>");
+        for (var k=1;k<img_list[j].length;k++){
+            if (key_list[j]==img_list[j][k]){
+                //H4 = H4.concat("<option value='",String(k),"' selected='selected'>",img_list[j][k].split('/')[2],"</option>");
+                H4 = H4.concat("<option value='",img_list[j][k],"' selected='selected'>",img_list[j][k].split('/')[2],"</option>");
+                // H4 = H4.concat("<option selected='selected' onfocus='change_Image(",String(j),",",img_list[j][k]," >",img_list[j][k].split('/')[2],"</option>");
+            }
+            else{
+                // alert(img_list[j][k]);
+                H4 = H4.concat("<option value='",img_list[j][k],"' onfocus='change_Image(",String(j),",",img_list[j][k],"' >",img_list[j][k].split('/')[2],"</option>");
+                // H4 = H4.concat("<option onfocus='change_Image(",String(j),",",img_list[j][k],"' >",img_list[j][k].split('/')[2],"</option>");
+                //H4 = H4.concat("<option value='",String(k),"'>",img_list[j][k].split('/')[2],"</option>");
+            }
+        }
+        // // alert(H4)
+        H4 = H4.concat("</select><br>");//local time:",extra_info[j]['local_time'],'<br>');
+        // alert(H4)
+        H4 = H4.concat('time: ',String(extra_info[j]['loc_date']),'<br> ');//String(extra_info[j]['score']),'<br>');
+        H4 = H4.concat("location: ",extra_info[j]['small_location'],'<br>');
+        // alert(H4)
+        if (extra_info[j]['activity']!='NULL'){
+            H4 = H4.concat("activity: ",extra_info[j]['activity'],"<br>");
+        }
+        // alert(H4)
+        H4 = H4.concat("</p>");
+        var H2 = "<div > <input type='checkbox' class='selectOne' onclick='funcOne()' name='img_checkbox".concat(String(j),"' id='img_checkbox",String(j),
+            "'><div class='selectAll_div'><label for='img_checkbox",String(j),"'> exclude this image</div></label> </div>");
+        H2 = H2.concat("<div> <input type='checkbox' name='semantic_checkbox",String(j),"' id='semantic_checkbox",String(j),
+            "'><div class='selectAll_div'><label for='semantic_checkbox",String(j),"'> exclude images similar in time</div></label></label></div>");
+        H2 = H2.concat("<div> <input type='checkbox' name='location_checkbox",String(j),"' id='location_checkbox",String(j),
+            "'><div class='selectAll_div'><label for='location_checkbox",String(j),"'> exclude images similar in location</div></label></label></div>");
+        var H3="";
+        // var H3 = "<div> <input type='checkbox' name='semantic_checkbox".concat(String(j),"' id='semantic_checkbox",String(j),
+            // "'><p><label for='semantic_checkbox",String(j),"'> This shot is irrelevant</p></label>");
+        // H3 = H3.concat("<option value='null'></option><option value='Location'>Location is irrelevant.</option><option value='Time'>Time is irrelevant.</option></select>")        
+        // var H4 = "<div>";
+        // for (var k=1;k<img_list[j].length;k++){
+        //      H4 = H4.concat("<p>",img_list[j][k],"</p>");
+        // }
+        // H4 = H4.concat("</div>");
+        var td1 = document.createElement('td');
+        var td2 = document.createElement('td');
+        td1.innerHTML = H1
+        // td2.innerHTML = H4.concat(H2,H3);
+        td2.innerHTML = H4.concat(H2,H3);
+        if(j%Img_num==0){
+            tr1 = document.createElement("tr");
+            tr2 = document.createElement("tr");
+        }
+        tr1.appendChild(td1);
+        tr2.appendChild(td2);
+        if((j+1)%Img_num==0 || j==key_list.length-1){
+            editimgTable.appendChild(tr1);
+            editimgTable.appendChild(tr2);
+        }
+        // var td = document.createElement('td');
+        // td.innerHTML = H1.concat(H4,H2,H3);
+        // if(j%3==0){
+        //     tr = document.createElement("tr");
+        // }
+        // tr.appendChild(td);
+        // if(j%3==2 || j==key_list.length-1){
+        //     editimgTable.appendChild(tr);
+        // }
+    }
+    function createRow(Tableid,value=""){
+        var editTable=document.getElementById(Tableid);
+        var len = editTable.rows.length;
+        var tableRow = editTable.insertRow(len);        
+        var H1 = "<td><input type='text' size='20px' name='".concat(Tableid,String(len),"' value='",value,"' ></td>");
+        H1 = H1 + '<td> <input type="button" value="Delete" onclick="delRow()"> </td>';
+        tableRow.innerHTML=H1;
+    }
+    function delRow(){
+        var tr = event.target.parentNode.parentNode;
+        tr.parentNode.removeChild(tr);
+    }
+    function funcAll(){
+        var selectAll = document.getElementById('selectAll');
+        var selectOnes = document.getElementsByClassName('selectOne');
+        for (var i = 0; i < selectOnes.length; i++) {                 //循环遍历，把全选框的值赋给每个单选框
+            selectOnes[i].checked = selectAll.checked;             
+        }
+    }
+    function funcOne(){                                                  
+            var selectAll = document.getElementById('selectAll');            //函数作用域，所以得再定义一遍
+            var selectOnes = document.getElementsByClassName('selectOne');
+            var isAllChecked = true;                                        //定义一个变量作为桥梁来控制全选按钮
+            for (var i = 0; i < selectOnes.length; i++) {
+                if (selectOnes[i].checked === false) {
+                    isAllChecked = false;
+                    break;
+                }
+            }
+            selectAll.checked = isAllChecked;
+        }
+    
+    function changeImage(Id){
+        var select_obj = document.getElementById(Id);
+        var Imgid = 'img'.concat(Id.substring(6))
+        var Img = document.getElementById(Imgid); 
+        Img.src = "/static/".concat(select_obj.value);
+        var ImgNameShow = document.getElementById('P'+String(Id.substring(6)));
+        ImgNameShow.innerHTML="Image: ".concat(select_obj.value.split("/")[2]);
+
+    }
+    function change_Image(j,imgname){
+        var Imgid = 'img'.concat(String(j))
+        var Img = document.getElementById(Imgid); 
+        Img.src = "/static/".concat(imgname);
+        var ImgNameShow = document.getElementById('P'+String(j));
+        ImgNameShow.innerHTML=imgname.split("/")[-2];
+    }
+</script>
+{% endblock %}

@@ -1,0 +1,525 @@
+{% extends "Title.html" %}
+{% block head %} 
+    <title>SEARCH | LIFE RECORD</title>
+    <link rel="stylesheet" href="/static/js/jRange-master/jquery.range.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="/static/js/jRange-master/jquery.range.js"></script>
+    <script src="/static/js/jRange-master/jquery.range-min.js"></script>
+    <link rel=stylesheet type=text/css href="{{ url_for('static',filename='css/SearchPage.css') }}">
+    <style>
+#middle{
+    position: absolute;
+    top: 50%; left:50%;
+    transform: translate(-50%,-45%);
+    height: 80%; width:80%;
+}
+.box{
+    width: 100%; border-radius: 8px; overflow: hidden;
+    margin-bottom: 10px;
+    border: #dfe6e9 1px solid;
+    position: relative; 
+}
+.subtitle{
+    display: block; padding: 8px 20px;
+    background: #74b9ff;
+    position: relative; font-size:22px;
+}
+.subtitle a{color: white;}
+.subtitle a:hover{color:black}
+.content{
+    width: 90%;
+    font-size: 18px;
+}
+#content0{ height: 160px;}
+#content1{ height: 190px;}
+#content2{ min-height: 350px;}
+#content3{ height: 160px;}
+#text{ position:relative; margin-top: 20px; top:2%; left:10%; }
+
+#form_fill {position: relative; left:10%;}
+#color{
+    position: absolute;
+    top: 30%; left:50px;
+    height: 200px; width:200px;
+}
+#color_text{ font: 20px sans-serif;}
+#color_list li{
+    margin:10px;
+}
+#basic_info{
+    position:absolute; top:25%; left:500px;
+}
+#basic_info li div{ font-size:18px }
+#basic_list input{display: none;}
+#basic_list input:checked+p{background-color:cyan;}
+#basic_list td{width:80px; border: 2px solid black;text-align: center;}
+
+#box2 .detailcontent{
+    top:16%; width: 30%;
+    border: rgb(183, 228, 247) 2px dotted;
+}
+.detailtitle{ text-align: center;
+    display: block; padding-top: 10px;padding-bottom: 6px;
+    background: rgb(183, 228, 247);
+    position: relative; font-size:20px;
+    }
+#time{ position:absolute; left:3%;}
+#time p{ font-size: 12px; position: absolute; bottom: 2px;}
+#tags{ position:absolute; left:36%;}
+#biology{ position:absolute; left:68%;}
+#local_time{
+    border-collapse: separate; border-spacing: 3px 7px;
+}
+#utc_time{
+    border-collapse: separate; border-spacing: 3px 7px;
+}
+#utc_text {
+    text-align: center;
+}
+/* #utc_text a{
+    color:black;
+}
+#utc_text a:hover{
+    color:black;
+} */
+#biology table { border-collapse: separate; border-spacing:8px 12px; }
+#biology p{ position: absolute; bottom: 5px;font-size: 12px; }
+.tagtitle{text-align: center;}
+.tag_add{position: relative;left:8%;}
+#tags ul li table{ border-collapse: separate; border-spacing: 30px 2px; text-align: center;}
+#tags ul li table tr {text-align: center;}
+#box3 .detailcontent{
+    top:35%; height:60%; width: 30%;
+    border: rgb(183, 228, 247) 2px dotted;
+}
+#this_semantic{ position:absolute; left:3%;}
+#future_semantic{ position: absolute;; left:36%;}
+#past_semantic{ position: absolute; left:68%;}
+#box3 .detailtitle{  font-size:20px;}
+#box3 .detailcontent table{ border-collapse: separate; border-spacing: 10px 12px; }
+#search {height: 30px;position:fixed;left:6%;bottom:50px;}
+#search input{padding: 16px 8px;}
+textarea{font-size: 16px;}
+.clear{clear: both;}
+    </style>
+    <script>
+        $(document).ready(function(){
+        $('.time_slide').jRange({
+            from: 0,
+            to: 24,
+            step: 1,
+            scale: [0,6,12,18,24],
+            format: '%s',
+            width: 150,
+            showLabels: true,
+            isRange : true
+        });
+    });
+    </script>
+{% endblock %}
+
+{% block body %}
+<form action="/search/" method="POST" id="F" >
+    <div id='middle'>
+        <li class='box' id='box0'>
+            <div class='subtitle' id='basic' > 
+                <img src="/static/icons/search1.png" alt="search" width="20" height="20">
+                <!-- <a href="javascript:;" id='basic_a' >文本查询输入</a> -->
+                <a href="javascript:;" id='basic_a' >Text Input</a>
+            </div>
+            <div class='content' id='content0'>
+                <textarea name="text_input" id="text" cols="130" rows="4"></textarea>
+                <div id='form_fill'>
+                    <!-- <input name="form_fill" type="submit" value="解析查询文本" class="myButton"> -->
+                    <input name="form_fill" type="submit" value="Fill in Forms" class="myButton">
+                    <!-- <a href="#" name="form_fill" class="myButton">Fill in Forms</a> -->
+                </div>
+            </div>
+        </li>
+        <li class='box' id='box1'>
+            <div class='subtitle' id='basic' > 
+                <img src="/static/icons/search1.png" alt="search" width="20" height="20">
+                <!-- <a href="javascript:;" >视觉信息</a> -->
+                <a href="javascript:;" >Basic Information</a>
+            </div>
+            <div class='content' id='content1'>
+                <div id='color'>
+                    <!-- <div id='color_text'>图片主要颜色:</div> -->
+                    <div id='color_text'>Color of the image:</div>
+                    <ul id='color_list'>
+                        <li><input type="color" name='color1' value='#c0c0c0'><input type="color" name='color2' value='#c0c0c0'><input type="color" name='color3' value='#c0c0c0'></li>
+                        <li><input type="color" name='color4' value='#c0c0c0'><input type="color" name='color5' value='#c0c0c0'><input type="color" name='color6' value='#c0c0c0'></li>
+                        <li><input type="color" name='color7' value='#c0c0c0'><input type="color" name='color8' value='#c0c0c0'><input type="color" name='color9' value='#c0c0c0'></li>
+                    </ul>
+                </div>
+                <div id='basic_info'>
+                    <ul id='basic_list'>
+                        <li> <p>brightness:</p>
+                            <table>
+                                <tr>
+                                    <td><input type="radio" name="brightness" id="none_bri" value="none" checked="checked"><p><label for="none_bri">none</label></p></td>
+                                    <td><input type="radio" name="brightness" id="low_bri" value="low"><p><label for="low_bri">low</label></p></td>
+                                    <td><input type="radio" name="brightness" id="medium_bri" value="medium"><p><label for="medium_bri">medium</label></p></td>
+                                    <td><input type="radio" name="brightness" id="high_bri" value="high"><p><label for="high_bri">high</label></p></td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li> <div>contrast: </div>
+                            <table>
+                                <tr>
+                                    <td><input type="radio" name="contrast" id="none_con" value="none" checked="checked"><p><label for="none_con">none</label></p></td>
+                                    <td><input type="radio" name="contrast" id="low_con" value="low"><p><label for="low_con">low</label></p></td>
+                                    <td><input type="radio" name="contrast" id="medium_con" value="medium"><p><label for="medium_con">medium</label></p></td>
+                                    <td><input type="radio" name="contrast" id="high_con" value="high"><p><label for="high_con">high</label></p></td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li> <div>saturation: </div> 
+                            <table>
+                                <tr>
+                                    <td><input type="radio" name="saturation" id="none_sat" value="none" checked="checked"><p><label for="none_sat">none</label></p></td>
+                                    <td><input type="radio" name="saturation" id="low_sat" value="low" ><p><label for="low_sat">low</label></p></td>
+                                    <td><input type="radio" name="saturation" id="medium_sat" value="medium" ><p><label for="medium_sat">medium</label></p></td>
+                                    <td><input type="radio" name="saturation" id="high_sat" value="high" ><p><label for="high_sat">high</label></p></td>
+                                </tr>
+                            </table>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+        <li class="box" id='box2'>
+            <div class='subtitle' id='detail'>
+                <img src="/static/icons/search1.png" alt="search" width="20" height="20">
+                <!-- <a href="javascript:;">文本信息</a> -->
+                <a href="javascript:;">Textual Description</a>
+                <!-- <a href="javascript:;" onclick="move('content2')">detail description </a> -->
+                <!-- <img src="/static/icons/-.png" alt="search" width="20" height="20" onclick="move('content2')" id='img2'> -->
+            </div>
+            <div class='content' id='content2'>
+                <div class='detailcontent' id='time'>
+                    <!-- <div class='detailtitle'>时间</div> -->
+                    <div class='detailtitle'>Time</div>
+                    <table id='local_time'>
+                        <!-- <tr align="center">
+                            <td colspan="2">Local Time</td>
+                        </tr> -->
+                        <tr>
+                            <td>Date: </td><td><input id='loc_date' type="text" size="10px" name="loc_date"></td>
+                        </tr>
+                        <tr>
+                            <td>Weekday: </td><td><input id='loc_weekday' type="text" size="10px" name='loc_weekday'></td>
+                        </tr>
+                        <tr>
+                            <td>Approximate time: </td>
+                            <td><select name="loc_time" id="loc_time">
+                                <option value="null"></option>
+                                <option value="early morning">early morning</option>
+                                <option value="morning">morning</option>
+                                <option value="noon">noon</option>
+                                <option value="early afternoon">early afternoon</option>
+                                <option value="afternoon">afternoon</option>
+                                <option value="evening">evening</option>
+                                <option value="night">night</option>
+                                <option value="late night">late night</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td>Range of hour: </td>
+                            <td><input type="hidden" class="time_slide" value="24" name="loc_timer"/></td>
+                        </tr>
+                        <tr align="center">
+                        </tr>
+                    </table>
+                    <!-- <div id="utc_text">
+                        <td>UTC Time</td>
+                        <a href="javascript:;" onclick="move('utctime1')" >UTC Time</a>
+                        <img src="/static/icons/-.png" alt="search" width="20" height="20" onclick="move('utctime1')" id='img1'>
+                    </div> -->
+                    <!-- <table id='utctime1'> 
+                        <tr>
+                            <td>Date: </td><td><input id='utc_date' type="text" size="10px" name="utc_date"></td>
+                        </tr>
+                        <tr>
+                            <td>Weekday: </td><td><input type="text" size="10px" name='utc_weekday'></td>
+                        </tr>
+                        <tr>
+                            <td>Approximate time: </td>
+                            <td><select name="utc_time" id="utc_time">
+                                <option value="null"></option>
+                                <option value="early morning">early morning</option>
+                                <option value="morning">morning</option>
+                                <option value="noon">noon</option>
+                                <option value="early afternoon">early afternoon</option>
+                                <option value="afternoon">afternoon</option>
+                                <option value="evening">evening</option>
+                                <option value="night">night</option>
+                                <option value="late night">late night</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td>Range of hour: </td>
+                            <td><input type="hidden" class="time_slide" value="24" name="utc_timer"/></td>
+                        </tr>
+                    </table> -->
+                    <p>*Please split multiple value by ','</p>
+                </div>
+                <div class='detailcontent' id='tags'>
+                    <!-- <div class='detailtitle'>物体标签</div> -->
+                    <div class='detailtitle'>Objects</div>
+                    <ul id="tags_ul">
+                        <li>
+                            <div class='tagtitle'>Objects in the scene:</div>
+                            <table id="this_tag">
+                                <tr>
+                                    <td><input type="text" id="this_tag0" name="this_tag0" size="20px"></td>
+                                    <td>
+                                        <input type="button" value="Delete" onclick="delRow()">
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class='tag_add'><input type="button" value="Add" onclick="createRow('this_tag')"></div>
+                            <!-- <div><input type="button" value="Delete" onclick="deleteRow('tags_this')"></div> -->
+                        </li>
+                        <li>
+                            <div class='tagtitle'> Objects seen in future 1 hour:</div>
+                            <table id="future_tag">
+                                <tr>
+                                    <td><input type="text" id="future_tag0" name="future_tag0" size="20px"></td>
+                                    <td>
+                                        <input type="button" value="Delete" onclick="delRow()">
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class='tag_add'><input type="button" value="Add" onclick="createRow('future_tag')"></div>
+                        </li>
+                        <li>
+                            <div class='tagtitle'> Objects seen in past 1 hour: </div>
+                            <table id="past_tag">
+                                <tr>
+                                    <td><input type="text" id="past_tag0" name="past_tag0" size="20px"></td>
+                                    <td>
+                                        <input type="button" value="Delete" onclick="delRow()">
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class='tag_add'><input type="button" value="Add" onclick="createRow('past_tag')"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class='detailcontent' id='biology'>
+                    <!-- <div class='detailtitle'>生命体征数据</div> -->
+                    <div class='detailtitle'>Biometrics Logs </div>
+                    <table>
+                        <tr>
+                            <td>Total Elevation is</td>
+                            <td><select name="elevation_range" id="elevation_range">
+                                <option value="above">above</option>
+                                <option value="under">under</option>
+                                <option value="between">between</option>
+                            </select></td>
+                            <td><input type="text" size="10px" name="elevation"></td>
+                        </tr>
+                        <tr>
+                            <td>Total calorie is</td>
+                            <td><select name="calories_range" id="calories_range">
+                                <option value="above">above</option>
+                                <option value="under">under</option>
+                                <option value="between">between</option>
+                            </select></td>
+                            <td><input type="text" size="10px" name="calories"></td>
+                        </tr>
+                        <tr>
+                            <td>Total Step is</td>
+                            <td><select name="steps_range" id="steps_range">
+                                <option value="above">above</option>
+                                <option value="under">under</option>
+                                <option value="between">between</option>
+                            </select></td>
+                            <td><input type="text" size="10px" name="steps"></td>
+                        </tr>
+                        <tr>
+                            <td>Average speed is</td>
+                            <td><select name="speed_range" id="speed_range">
+                                <option value="above">above</option>
+                                <option value="under">under</option>
+                                <option value="between">between</option>
+                            </select></td>
+                            <td><input type="text" size="10px" name="speed"></td>
+                        </tr>
+                        <tr>
+                            <td>Average heart rate  is</td>
+                            <td><select name="heart_range" id="heart_range">
+                                <option value="above">above</option>
+                                <option value="under">under</option>
+                                <option value="between">between</option>
+                            </select></td>
+                            <td><input type="text" size="10px" name="heart"></td>
+                        </tr>
+                    </table>
+                    <p>*if 'between' is choosen, please input two numbers and seperate by ','</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </li>
+        <li class="box" id='box3'>
+            <div class='subtitle' id='semantic'>
+                <img src="/static/icons/search1.png" alt="search" width="20" height="20">
+                <!-- <a href="javascript:;"> 语义特征</a> -->
+                <a href="javascript:;"> Semantic Description</a>
+                <!-- <a href="javascript:;" onclick="move('content3')"> semantic description</a> -->
+                <!-- <img src="/static/icons/-.png" alt="search" width="20" height="20" onclick="move('content3')" id='img3'> -->
+            </div>
+            <div class='content' id='content3'>
+                <div class="detailcontent" id='this_semantic'>
+                    <!-- <div class='detailtitle'>当前场景</div> -->
+                    <div class='detailtitle'>Description in this shot</div>
+                    <table>
+                        <tr>
+                            <td>Location:</td>
+                            <td>
+                                <input type="text" size="14px" id="this_location" name="this_location">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Activity:</td>
+                            <td>
+                                <input type="text" size="14px" id="this_activity" name="this_activity">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="detailcontent" id='future_semantic'>
+                    <!-- <div class='detailtitle'>未来一个小时</div> -->
+                    <div class='detailtitle'>Description for future 1 hour</div>
+                    <table>
+                        <tr>
+                            <td>Location:</td>
+                            <td>
+                                <input type="text" size="14px" id="future_location" name="future_location">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Activity:</td>
+                            <td>
+                                <input type="text" size="14px" id="future_activity" name="future_activity">
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+                <div class="detailcontent" id='past_semantic'>
+                    <!-- <div class='detailtitle'>过去一个小时</div> -->
+                    <div class='detailtitle'>Description for past 1 hour</div>
+                    <table>
+                        <tr>
+                            <td>Location:</td>
+                            <td>
+                                <input type="text" size="14px" id="past_location" name="past_location">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Activity:</td>
+                            <td>
+                                <input type="text" size="14px" id="past_activity" name="past_activity">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </li>
+    </div>
+    <!-- <div id='search'><input name="search" type="submit" value="搜索" class="myButton"></div> -->
+    <div id='search'><input name="search" type="submit" value="Search" class="myButton"></div>
+</form>
+
+<script>
+    //var oA=oDiv.getElementsById('basic_a');//获取 a 标签
+    var form_data = {{ formcontent |tojson }};
+    for (var key in form_data){
+        var inputDiv = document.getElementById(key);
+        if (key.lastIndexOf("tag") == -1){
+            inputDiv.value = form_data[key];}
+        else{
+            for(var j=0; j<form_data[key].length;j++){
+                var inputName = key.concat(String(j));
+                if(j==0){
+                   document.getElementById(inputName).value= form_data[key][j];  
+                }
+                else{
+                    createRow(key,form_data[key][j]);
+                    // var editTable = document.getElementById(key);
+                    // var H = "<input type='text' size='20px' name='".concat(inputName,"' value='",form_data[key][j],"' >");
+                    // var tr=document.createElement("tr");
+                    // var td=document.createElement("td");
+                    // td.innerHTML = H;
+                    // tr.appendChild(td);
+                    // editTable.appendChild(tr);
+                }
+            }
+        }
+    }
+    
+    Checkheight();
+    var onOff=[true,true,true];
+    var old=["","",""];
+    var Form_info=[new Array(),new Array(),new Array()];
+    function move(content){ //a 链接点击后执行 move 函数
+        var oDiv=document.getElementById(content);//获取文字的盒子
+        var oImg=document.getElementById('img'.concat(content.charAt(7)));
+        var idx = Number(content.charAt(7))-1;
+        if(onOff[idx]){  //判断
+            onOff[idx]=false;
+            old[idx]=oDiv.innerHTML;
+            oDiv.style.height=0;
+            oDiv.innerHTML="";//oDiv.innerHTML.substring(0,65)+'...<a href="javascript:;"> >>展开 </a>';//默认显示65个字符，字符末尾添加 “...>>展开”
+            oImg.src = "/static/icons/+.png";
+            var form = document.getElementById('F');
+            var tagElements = form.getElementsByTagName('input');
+            Form_info[idx].length=0;
+            for (var j=0; j< tagElements.length; j++){
+                Form_info[idx].push(tagElements[j]);
+            }
+        }else{
+            onOff[idx]=true;
+            oDiv.style.height="200px";
+            oDiv.innerHTML=old[idx];
+            oImg.src = "/static/icons/-.png";
+        }
+    }
+
+    function createRow(Tableid,value=""){
+        var editTable=document.getElementById(Tableid);
+        var len = editTable.rows.length;
+        var tableRow = editTable.insertRow(len);        
+        var H1 = "<td><input type='text' size='20px' name='".concat(Tableid,String(len),"' value='",value,"' ></td>");
+        H1 = H1 + '<td> <input type="button" value="Delete" onclick="delRow()"> </td>';
+        tableRow.innerHTML=H1;
+        Checkheight();
+    }
+    function delRow(){
+        var tr = event.target.parentNode.parentNode;
+        tr.parentNode.removeChild(tr);
+        Checkheight();
+    }
+    
+    function Checkheight(){
+        var ul = document.getElementById("tags_ul");
+        var div1 = document.getElementById("time");
+        var div2 = document.getElementById("tags");
+        var div3 = document.getElementById("biology");
+        var height = Math.max(360,ul.offsetHeight+60,div1.offsetHeight,div2.offsetHeight,div3.offsetHeight);
+        var delta = Math.min(height-div1.offsetHeight,height-div2.offsetHeight,height-div3.offsetHeight);
+        div1.style.height=String(height)+"px";
+        div2.style.height=String(height)+"px";
+        div3.style.height=String(height)+"px";
+        div4 = document.getElementById("content2");
+        // console.log(div4.offsetHeight);
+        // console.log(height);
+        // console.log(delta);
+        div4.style.height = String(Math.max(height+50,div4.offsetHeight+delta))+"px";
+        // console.log(div4.offsetHeight);
+    }
+
+</script>
+{% endblock %}

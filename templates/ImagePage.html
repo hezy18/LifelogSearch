@@ -1,0 +1,73 @@
+{% extends "Title.html" %}
+{% block head %} 
+    <title>IMAGE SEARCH| LIFE RECORD</title>
+    <style>
+        #content{
+            position: absolute;
+            top: 50%; left:50%;
+            transform: translate(-50%,-45%);
+            height: 80%; width:95%;
+        }
+        #fileload{
+            position: absolute;
+            top:44%; left: 40%;
+            transform: translate(-50%,-50%);
+        }
+        #chooseImage{
+            margin-bottom: 50px;
+        }
+        #search_choice{
+            position: absolute;
+            top:88%; left: 30%;
+            transform: translate(-50%,-10%);
+            font-size: 20px;
+        }
+        #subtitle{
+            font-size: 24px;font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            position: absolute; top:5%; left:4%;
+        }
+        #fileload table{
+            border-collapse: separate; border-spacing:8px 8px;
+            border-color: #ced6e0; border-width: 3px; border-style: solid;
+            margin-bottom: 10px;    
+        }
+        #fileload table td{
+            border: 2px solid #ced6e0;
+            text-align: center;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+   <span id='content'>
+        <form action="/image_search/" method="POST" id="F" enctype="multipart/form-data">
+            <div id='fileload'>
+                <table>
+                    <tr>
+                        <td>
+                            <!-- <div id='subtitle'>图像查询</div> -->
+                            <div id='subtitle'>Image as Query</div>
+                            <div><input type="file" id="chooseImage" name='chooseImage' value='Choose an image'></div>
+                            <!-- <div><input type="submit" name='uploadImage' value='上传图片'></div> -->
+                            <div><input type="submit" name='uploadImage' value='Upload the image'></div>
+                        </td>
+                        <td>
+                            <div><img id="preview" src='/{{imgpath}}' alt='{{imgpath}}' width="720"></div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id='search_choice'>
+                <!-- <div>寻找相似图片：</div> -->
+                <div>Find images similar in </div>
+                <!-- <input type="checkbox" name="search_choice" value="content">视觉信息相似 (颜色和色调等)<br> -->
+                <input type="checkbox" name="search_choice" value="content">content (color and hue)<br>
+                <!-- <input type="checkbox" name="search_choice" value="semantic">语义信息相似 (物体标签)<br> -->
+                <input type="checkbox" name="search_choice" value="semantic">semantics (objects)<br>
+                <!-- <input type="submit" name="search" value="搜索"> -->
+                <input type="submit" name="search" value="Search">
+            </div>
+        </form>
+   </span> 
+{% endblock %}
