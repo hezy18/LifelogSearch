@@ -1,0 +1,54 @@
+a{ text-decoration: none;font-size:20px;font-family: Arial, Helvetica, sans-serif;}
+a:link{color: black;}
+a:visited{color:black;}
+a:hover{color: white;}
+/* #allpage{
+    position:absolute;
+    width: 100%; height: 100%;
+} */
+#box{
+    position: absolute;
+    width:60%; height: 40%; 
+    top: 15%; left:20%;
+    border-color: rgb(119, 195, 240);
+    border-width: 5px;
+    border-style: dotted;
+}
+#title{
+    position:absolute;
+    left: 15%; width: 70%;top: 10%; height: 30%;
+    text-align: center;
+}
+#title #h1{
+    font-size: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#search{
+    position: absolute;
+    left: 35%; width: 30%; top:50%; height: 10%;
+    text-align: center;
+    background-color: rgb(183, 228, 247);
+}
+#search a{
+    line-height: 25%;
+}
+#other{
+    position: absolute;
+    left: 30%; width:40%; top:50%;
+}
+#other span{
+    background-color: rgb(183, 228, 247);
+}
+#left{
+    float: left;
+}
+#right{
+    float: right;
+}
+#contact{
+    position: absolute;
+    left: 40%; width: 20%; top:90%; 
+    text-align: center;
+}
+#contact a:link{color: gray; font-size: 10%;}
+#contact a:hover{color: black;}

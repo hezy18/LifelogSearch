@@ -1,0 +1,89 @@
+/* #middle{
+    position: absolute;
+    top: 50%; left:50%;
+    transform: translate(-50%,-45%);
+    height: 80%; width:1200px;
+}
+.box{
+    width: 100%; border-radius: 8px; overflow: hidden;
+    margin-bottom: 10px;
+    border: #dfe6e9 1px solid;
+    position: relative; 
+}
+.subtitle{
+    display: block; padding: 8px 20px;
+    background: #74b9ff;
+    position: relative; font-size:22px;
+}
+.subtitle a{color: white;}
+.subtitle a:hover{color:black}
+.content{
+    width: 90%;
+    font-size: 18px;
+}
+#content0{ height: 136px;}
+#content1{ height: 170px;}
+#content2{ min-height: 300px;}
+#content3{ height: 160px;}
+#text{ position:relative; margin-top: 20px; top:20%; left:10%; }
+
+#form_fill {position: relative; left:10%;}
+#color{
+    position: absolute;
+    top: 30%; left:50px;
+    height: 200px; width:200px;
+}
+#color_text{ font: 20px sans-serif;}
+#color_list li{
+    margin:10px;
+}
+#basic_info{
+    position:absolute; top:35%; left:500px;
+}
+#basic_info li div{ font-size:18px }
+
+#box2 .detailcontent{
+    top:16%; height:80%; width: 30%;
+    border: rgb(183, 228, 247) 2px dotted;
+}
+.detailtitle{ text-align: center;
+    display: block; padding-top: 10px;padding-bottom: 6px;
+    background: rgb(183, 228, 247);
+    position: relative; font-size:20px;
+    }
+#time{ position:absolute; left:3%;}
+#time p{ font-size: 12px; position: absolute; bottom: 2px;}
+#tags{ position:absolute; left:36%;}
+#biology{ position:absolute; left:68%;}
+#local_time{
+    border-collapse: separate; border-spacing: 3px 7px;
+}
+#utc_time{
+    border-collapse: separate; border-spacing: 3px 7px;
+}
+#utc_text {
+    text-align: center;
+}
+#utc_text a{
+    color:black;
+}
+#utc_text a:hover{
+    color:black;
+}
+#biology table { border-collapse: separate; border-spacing:8px 12px; }
+#biology p{ position: absolute; bottom: 5px;font-size: 12px; }
+.tagtitle{text-align: center;}
+.tag_add{position: relative;left:8%;}
+#tags ul li table{ border-collapse: separate; border-spacing: 30px 2px; text-align: center;}
+#tags ul li table tr {text-align: center;}
+#box3 .detailcontent{
+    top:35%; height:60%; width: 30%;
+    border: rgb(183, 228, 247) 2px dotted;
+}
+#this_semantic{ position:absolute; left:3%;}
+#future_semantic{ position: absolute;; left:36%;}
+#past_semantic{ position: absolute; left:68%;}
+#box3 .detailtitle{  font-size:20px;}
+#box3 .detailcontent table{ border-collapse: separate; border-spacing: 10px 12px; }
+#search {height: 30px; margin: 10px;} */
+/* textarea{font-size: 16px;} */
