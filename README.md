@@ -1,6 +1,6 @@
 # LifelogSearch
 
-Codes for [THUIR-LL at the NTCIR-16 Lifelog-4 Task: Enhanced Interactive Lifelog Search Engine]([https://dl.acm.org/doi/pdf/10.1145/3626772.3657890](https://research.nii.ac.jp/ntcir/workshop/OnlineProceedings16/pdf/ntcir/02-NTCIR16-LIFELOG-HeZ.pdf))
+Codes for [THUIR-LL at the NTCIR-16 Lifelog-4 Task: Enhanced Interactive Lifelog Search Engine](https://research.nii.ac.jp/ntcir/workshop/OnlineProceedings16/pdf/ntcir/02-NTCIR16-LIFELOG-HeZ.pdf)
 
 ## Run Command
 python app.py
